@@ -1,6 +1,12 @@
-num1 = int(input("Ingrese el primer numero: "))
-num2 = int(input("Ingrese el segundo numero: "))
+def printArray(array):
+    message = "Los números ordenados son: "
+    for i in array:
+        message += str(i) + " "
+    print(message)
 
-numeros = [num1, num2]
+number1 = int(input("Ingrese el primer numero: "))
+number2 = int(input("Ingrese el segundo numero: "))
 
-print(str(min(numeros)) + ", " + str(max(numeros)))
+numbers = [number1, number2]
+
+printArray(sorted(numbers))
