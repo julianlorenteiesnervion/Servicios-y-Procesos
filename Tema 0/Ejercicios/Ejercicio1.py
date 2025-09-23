@@ -1,6 +1,6 @@
-numero = int(input("Ingrese un numero: "))
+def is_even(number):
+    return number % 2 == 0
 
-if numero % 2 == 0:
-    print("El numero es par")
-else:
-    print("El numero es impar")
+number = int(input("Ingrese un numero: "))
+
+print("El numero " + str(number) + " es " + ("par" if is_even(number) else "impar"))
