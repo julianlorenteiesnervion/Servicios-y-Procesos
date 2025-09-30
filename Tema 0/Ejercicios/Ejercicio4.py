@@ -2,7 +2,7 @@
 import random
 
 # Variable para guardar el número ingresado por el usuario
-guess = 0 # Preguntar a Elena si es buena práctica inicializar la variable a 0 para que el usuario no pueda ingresar texto después
+guess = 0
 
 # Genera un número aleatorio entre 1 y 100
 secretNumber = random.randint(1, 100)
