@@ -4,9 +4,16 @@ letters = {}
 # Solicitamos al usuario que introduzca una palabra
 word = input("Introduce una palabra: ")
 
-# Recorremos cada letra en la palabra y contamos sus apariciones
-for i in range(len(word)):
-    letters[word[i]] = word.count(word[i])
+
+# Recorrer la palabra letra a letra
+# Comprobar si la letra ya está en el diccionario
+# Si está, incrementar su conteo
+# Si no está, añadirla al diccionario con un conteo de 1
+for letter in word:
+    if letter in letters:
+        letters[letter] += 1
+    else:
+        letters[letter] = 1
 
 # Mostramos el resultado
 for letter, count in letters.items():
