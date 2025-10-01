@@ -4,7 +4,6 @@ letters = {}
 # Solicitamos al usuario que introduzca una palabra
 word = input("Introduce una palabra: ")
 
-
 # Recorrer la palabra letra a letra
 # Comprobar si la letra ya está en el diccionario
 # Si está, incrementar su conteo
