@@ -1,0 +1,799 @@
+[
+    {
+        "label": "sqrt",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "entidades.Producto",
+        "description": "entidades.Producto",
+        "isExtraImport": true,
+        "detail": "entidades.Producto",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "entidades.Perecedero",
+        "description": "entidades.Perecedero",
+        "isExtraImport": true,
+        "detail": "entidades.Perecedero",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "entidades.NoPerecedero",
+        "description": "entidades.NoPerecedero",
+        "isExtraImport": true,
+        "detail": "entidades.NoPerecedero",
+        "documentation": {}
+    },
+    {
+        "label": "CuentaCorriente",
+        "kind": 6,
+        "importPath": "Tema 0.Clases.Ejercicio1",
+        "description": "Tema 0.Clases.Ejercicio1",
+        "peekOfCode": "class CuentaCorriente:\n    # Constructores\n    def __init__(self, dni, saldo):\n        self.dni = dni\n        self.nombre = \"\"\n        self.saldo = saldo\n    def __init__(self, dni, nombre, saldo):\n        self.dni = dni\n        self.nombre = nombre\n        self.saldo = saldo",
+        "detail": "Tema 0.Clases.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Clases.Ejercicio1",
+        "description": "Tema 0.Clases.Ejercicio1",
+        "peekOfCode": "def main():\n    # Crear dos cuentas\n    cuenta1 = CuentaCorriente(\"12345678A\", \"Juan Pérez\", 1000)\n    cuenta2 = CuentaCorriente(\"87654321B\", \"María Gómez\", 500)\n    # Mostrar las cuentas\n    print(cuenta1)\n    print(cuenta2)\n    # Ingresar dinero en la cuenta1\n    cuenta1.ingresar_dinero(200)\n    print(\"Después de ingresar 200 en cuenta1:\")",
+        "detail": "Tema 0.Clases.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "Libro",
+        "kind": 6,
+        "importPath": "Tema 0.Clases.Ejercicio2",
+        "description": "Tema 0.Clases.Ejercicio2",
+        "peekOfCode": "class Libro:\n    # Constructor de la clase\n    def __init__(self, titulo, autor, ejemplares, ejemplares_prestados):\n        self.titulo = titulo\n        self.autor = autor\n        self.ejemplares = ejemplares\n        self.ejemplares_prestados = ejemplares_prestados\n    # Método para verificar si el libro es prestable\n    def es_prestable(self):\n        return self.ejemplares > self.ejemplares_prestados",
+        "detail": "Tema 0.Clases.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Clases.Ejercicio2",
+        "description": "Tema 0.Clases.Ejercicio2",
+        "peekOfCode": "def main():\n    libro1 = Libro(\"El Quijote\", \"Miguel de Cervantes\", 5, 2)\n    libro2 = Libro(\"Cien años de soledad\", \"Gabriel García Márquez\", 3, 1)\n    libro3 = Libro(\"El Quijote\", \"Miguel de Cervantes\", 4, 0)\n    print(libro1)\n    print(libro2)\n    print(f'¿Se puede prestar el libro1? {libro1.es_prestable()}')\n    print(f'¿Se puede prestar el libro2? {libro2.es_prestable()}')\n    print(f'Préstamo del libro1: {libro1.prestamo()}')\n    print(f'Préstamo del libro2: {libro2.prestamo()}')",
+        "detail": "Tema 0.Clases.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "Punto",
+        "kind": 6,
+        "importPath": "Tema 0.Clases.Ejercicio3",
+        "description": "Tema 0.Clases.Ejercicio3",
+        "peekOfCode": "class Punto:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def setXY(self, x, y):\n        self.x = x\n        self.y = y\n    def desplaza(self, dx, dy):\n        self.x += dx\n        self.y += dy",
+        "detail": "Tema 0.Clases.Ejercicio3",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Clases.Ejercicio3",
+        "description": "Tema 0.Clases.Ejercicio3",
+        "peekOfCode": "def main():\n    p1 = Punto(3, 4)\n    p2 = Punto(0, 0)\n    print(f\"Punto 1: {p1}\")\n    print(f\"Punto 2: {p2}\")\n    distancia_inicial = p1.distancia(p2)\n    print(f\"Distancia inicial entre p1 y p2: {distancia_inicial}\")\n    p1.desplaza(1, -1)\n    print(f\"Punto 1 después de desplazar: {p1}\")\n    distancia_final = p1.distancia(p2)",
+        "detail": "Tema 0.Clases.Ejercicio3",
+        "documentation": {}
+    },
+    {
+        "label": "Articulo",
+        "kind": 6,
+        "importPath": "Tema 0.Clases.Ejercicio4",
+        "description": "Tema 0.Clases.Ejercicio4",
+        "peekOfCode": "class Articulo:\n    IVA = 21\n    def __init__(self, nombre, precio, cuantos_quedan):\n        self.nombre = nombre\n        self.precio = precio\n        self.cuantos_quedan = cuantos_quedan\n    def get_pvp(self):\n        return self.precio * (1 + Articulo.IVA / 100)\n    def get_pvp_con_descuento(self, descuento):\n        return self.get_pvp() * (1 - descuento / 100)",
+        "detail": "Tema 0.Clases.Ejercicio4",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Clases.Ejercicio4",
+        "description": "Tema 0.Clases.Ejercicio4",
+        "peekOfCode": "def main():\n    articulo1 = Articulo(\"Camiseta\", 20, 100)\n    articulo2 = Articulo(\"Pantalón\", 40, 50)\n    print(articulo1)\n    print(articulo2)\n    print(f\"PVP Camiseta: {articulo1.get_pvp()}€\")\n    print(f\"PVP Pantalón con 10% de descuento: {articulo2.get_pvp_con_descuento(10)}€\")\n    if articulo1.vender(10):\n        print(\"Venta de 10 camisetas realizada.\")\n    else:",
+        "detail": "Tema 0.Clases.Ejercicio4",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio1",
+        "description": "Tema 0.Colecciones.Ejercicio1",
+        "peekOfCode": "numeros = [0] * 10\n# Creamos una lista con 10 números aleatorios entre 1 y 100\nfor i in range(10):\n    numeros[i] = random.randint(1, 100)\n# Mostramos la lista\nprint(\"Lista:\", numeros)",
+        "detail": "Tema 0.Colecciones.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "encode",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio10",
+        "description": "Tema 0.Colecciones.Ejercicio10",
+        "peekOfCode": "def encode(text, dictionary):\n    encoded_text = \"\"\n    for char in text:\n        if char in dictionary:\n            encoded_text += dictionary[char]\n        else:\n            encoded_text += char\n    return encoded_text\n# Diccionario\ndictionary = {",
+        "detail": "Tema 0.Colecciones.Ejercicio10",
+        "documentation": {}
+    },
+    {
+        "label": "dictionary",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio10",
+        "description": "Tema 0.Colecciones.Ejercicio10",
+        "peekOfCode": "dictionary = {\n    \"e\": \"p\",\n    \"i\": \"v\",\n    \"k\": \"i\",\n    \"m\": \"u\",\n    \"p\": \"m\",\n    \"q\": \"t\",\n    \"r\": \"e\",\n    \"s\": \"r\",\n    \"t\": \"k\",",
+        "detail": "Tema 0.Colecciones.Ejercicio10",
+        "documentation": {}
+    },
+    {
+        "label": "phrase",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio10",
+        "description": "Tema 0.Colecciones.Ejercicio10",
+        "peekOfCode": "phrase = input(\"Introduce una frase: \")\n# Codificar la frase\nencoded_phrase = encode(phrase, dictionary)\n# Mostrar la frase codificada\nprint(\"Frase codificada:\", encoded_phrase)",
+        "detail": "Tema 0.Colecciones.Ejercicio10",
+        "documentation": {}
+    },
+    {
+        "label": "encoded_phrase",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio10",
+        "description": "Tema 0.Colecciones.Ejercicio10",
+        "peekOfCode": "encoded_phrase = encode(phrase, dictionary)\n# Mostrar la frase codificada\nprint(\"Frase codificada:\", encoded_phrase)",
+        "detail": "Tema 0.Colecciones.Ejercicio10",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio2",
+        "description": "Tema 0.Colecciones.Ejercicio2",
+        "peekOfCode": "numbers = [0] * 10\n# Le preguntamos al usuario 10 números reales\nfor i in range(10):\n    numbers[i] = float(input(\"Introduce un número real: \"))\n# Mostramos el número mínimo y máximo\nprint(\"El número mínimo es:\", min(numbers))\nprint(\"El número máximo es:\", max(numbers))",
+        "detail": "Tema 0.Colecciones.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "isEven",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio3",
+        "description": "Tema 0.Colecciones.Ejercicio3",
+        "peekOfCode": "def isEven(num):\n    return num % 2 == 0\n# Declaramos una lista de longitud 8\nnumbers = [0] * 8\n# Le preguntamos al usuario por 8 números\nfor i in range(8):\n    numbers[i] = int(input(\"Introduce un número: \"))\n# Recorremos la lista y mostramos si cada número es par o impar\nfor number in numbers:\n    print(f\"{number} : {'Par' if isEven(number) else 'Impar'}\")",
+        "detail": "Tema 0.Colecciones.Ejercicio3",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio3",
+        "description": "Tema 0.Colecciones.Ejercicio3",
+        "peekOfCode": "numbers = [0] * 8\n# Le preguntamos al usuario por 8 números\nfor i in range(8):\n    numbers[i] = int(input(\"Introduce un número: \"))\n# Recorremos la lista y mostramos si cada número es par o impar\nfor number in numbers:\n    print(f\"{number} : {'Par' if isEven(number) else 'Impar'}\")",
+        "detail": "Tema 0.Colecciones.Ejercicio3",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio4",
+        "description": "Tema 0.Colecciones.Ejercicio4",
+        "peekOfCode": "numbers = [0] * 10\n# Le preguntamos al usuario que introduzca 10 números\nfor i in range(10):\n    numbers[i] = int(input(\"Introduce un número: \"))\n# Ordenamos la lista de mayor a menor\nnumbers.sort(reverse = True)\n# Mostramos la lista ordenada\nprint(numbers)",
+        "detail": "Tema 0.Colecciones.Ejercicio4",
+        "documentation": {}
+    },
+    {
+        "label": "numbers.sort(reverse",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio4",
+        "description": "Tema 0.Colecciones.Ejercicio4",
+        "peekOfCode": "numbers.sort(reverse = True)\n# Mostramos la lista ordenada\nprint(numbers)",
+        "detail": "Tema 0.Colecciones.Ejercicio4",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio5",
+        "description": "Tema 0.Colecciones.Ejercicio5",
+        "peekOfCode": "numbers = [0] * 100\n# Rellenamos la lista con números aleatorios entre 1 y 10\nfor i in range(100):\n    numbers[i] = random.randint(1, 10)\n# Pedimos al usuario un número\nnumber = int(input(\"Introduce un número: \"))\n# Contamos y mostramos cuántas veces aparece el número en la lista\nprint(f\"El número {number} aparece {numbers.count(number)} veces en la lista.\")",
+        "detail": "Tema 0.Colecciones.Ejercicio5",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio5",
+        "description": "Tema 0.Colecciones.Ejercicio5",
+        "peekOfCode": "number = int(input(\"Introduce un número: \"))\n# Contamos y mostramos cuántas veces aparece el número en la lista\nprint(f\"El número {number} aparece {numbers.count(number)} veces en la lista.\")",
+        "detail": "Tema 0.Colecciones.Ejercicio5",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio6",
+        "description": "Tema 0.Colecciones.Ejercicio6",
+        "peekOfCode": "text = \"Hola qué tal estás. Hola muy bien. Estás.\"\n# Mostramos la frecuencia de cada palabra en el texto\n# Dividimos el texto en palabras\nwords = text.split()\n# Contar la frecuencia de cada palabra\nword_count = {}\n# Recorremos cada palabra en la lista\nfor word in words:\n    # Limpiamos signos de puntuación y convertimos a minúsculas\n    word = word.strip(\".,\").lower()",
+        "detail": "Tema 0.Colecciones.Ejercicio6",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio6",
+        "description": "Tema 0.Colecciones.Ejercicio6",
+        "peekOfCode": "words = text.split()\n# Contar la frecuencia de cada palabra\nword_count = {}\n# Recorremos cada palabra en la lista\nfor word in words:\n    # Limpiamos signos de puntuación y convertimos a minúsculas\n    word = word.strip(\".,\").lower()\n    # Actualizamos el conteo de la palabra\n    if word in word_count:\n        word_count[word] += 1",
+        "detail": "Tema 0.Colecciones.Ejercicio6",
+        "documentation": {}
+    },
+    {
+        "label": "word_count",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio6",
+        "description": "Tema 0.Colecciones.Ejercicio6",
+        "peekOfCode": "word_count = {}\n# Recorremos cada palabra en la lista\nfor word in words:\n    # Limpiamos signos de puntuación y convertimos a minúsculas\n    word = word.strip(\".,\").lower()\n    # Actualizamos el conteo de la palabra\n    if word in word_count:\n        word_count[word] += 1\n    else:\n        word_count[word] = 1",
+        "detail": "Tema 0.Colecciones.Ejercicio6",
+        "documentation": {}
+    },
+    {
+        "label": "addContact",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio7",
+        "description": "Tema 0.Colecciones.Ejercicio7",
+        "peekOfCode": "def addContact(name, phoneNumber):\n    contacts[name] = phoneNumber\ndef getContact(name):\n    return contacts.get(name, \"Contacto no encontrado.\")\ndef deleteContact(name):\n    if name in contacts:\n        del contacts[name]\n# Diccionario para almacenar los contactos\ncontacts = {}\n# Imprimimos el menú con las opciones disponibles",
+        "detail": "Tema 0.Colecciones.Ejercicio7",
+        "documentation": {}
+    },
+    {
+        "label": "getContact",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio7",
+        "description": "Tema 0.Colecciones.Ejercicio7",
+        "peekOfCode": "def getContact(name):\n    return contacts.get(name, \"Contacto no encontrado.\")\ndef deleteContact(name):\n    if name in contacts:\n        del contacts[name]\n# Diccionario para almacenar los contactos\ncontacts = {}\n# Imprimimos el menú con las opciones disponibles\nprint(\"1. Añadir contacto\\n2. Buscar contacto\\n3. Eliminar contacto\\n4. Salir\")\noption = input(\"Seleccione una opción (1-4): \")",
+        "detail": "Tema 0.Colecciones.Ejercicio7",
+        "documentation": {}
+    },
+    {
+        "label": "deleteContact",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio7",
+        "description": "Tema 0.Colecciones.Ejercicio7",
+        "peekOfCode": "def deleteContact(name):\n    if name in contacts:\n        del contacts[name]\n# Diccionario para almacenar los contactos\ncontacts = {}\n# Imprimimos el menú con las opciones disponibles\nprint(\"1. Añadir contacto\\n2. Buscar contacto\\n3. Eliminar contacto\\n4. Salir\")\noption = input(\"Seleccione una opción (1-4): \")\nwhile option != \"4\":\n    if option == \"1\": # Añadir contacto",
+        "detail": "Tema 0.Colecciones.Ejercicio7",
+        "documentation": {}
+    },
+    {
+        "label": "contacts",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio7",
+        "description": "Tema 0.Colecciones.Ejercicio7",
+        "peekOfCode": "contacts = {}\n# Imprimimos el menú con las opciones disponibles\nprint(\"1. Añadir contacto\\n2. Buscar contacto\\n3. Eliminar contacto\\n4. Salir\")\noption = input(\"Seleccione una opción (1-4): \")\nwhile option != \"4\":\n    if option == \"1\": # Añadir contacto\n        name = input(\"Ingrese el nombre del contacto: \")\n        phoneNumber = input(\"Ingrese el número de teléfono: \")\n        addContact(name, phoneNumber)\n        print(f\"Contacto {name} añadido.\")",
+        "detail": "Tema 0.Colecciones.Ejercicio7",
+        "documentation": {}
+    },
+    {
+        "label": "option",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio7",
+        "description": "Tema 0.Colecciones.Ejercicio7",
+        "peekOfCode": "option = input(\"Seleccione una opción (1-4): \")\nwhile option != \"4\":\n    if option == \"1\": # Añadir contacto\n        name = input(\"Ingrese el nombre del contacto: \")\n        phoneNumber = input(\"Ingrese el número de teléfono: \")\n        addContact(name, phoneNumber)\n        print(f\"Contacto {name} añadido.\")\n    elif option == \"2\": # Buscar contacto\n        name = input(\"Ingrese el nombre del contacto a buscar: \")\n        print(getContact(name))",
+        "detail": "Tema 0.Colecciones.Ejercicio7",
+        "documentation": {}
+    },
+    {
+        "label": "add_product",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio8",
+        "description": "Tema 0.Colecciones.Ejercicio8",
+        "peekOfCode": "def add_product(name):\n    if name in products:\n        result = False\n    else:\n        products[name] = 0\n        result = True\n    return result\n# Método para vender x cantidad un producto\ndef sell_product(name, quantity):\n    if name in products:",
+        "detail": "Tema 0.Colecciones.Ejercicio8",
+        "documentation": {}
+    },
+    {
+        "label": "sell_product",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio8",
+        "description": "Tema 0.Colecciones.Ejercicio8",
+        "peekOfCode": "def sell_product(name, quantity):\n    if name in products:\n        products[name] += quantity\n        result = True\n    else:\n        result = False\n    return result\n# Método para obtener las ventas de un producto\ndef get_sales(name):\n    if name in products:",
+        "detail": "Tema 0.Colecciones.Ejercicio8",
+        "documentation": {}
+    },
+    {
+        "label": "get_sales",
+        "kind": 2,
+        "importPath": "Tema 0.Colecciones.Ejercicio8",
+        "description": "Tema 0.Colecciones.Ejercicio8",
+        "peekOfCode": "def get_sales(name):\n    if name in products:\n        sales = products[name]\n    else:\n        sales = -1\n    return sales\n# Diccionario para almacenar los productos\nproducts = {}\n# Programa principal\noption = int(input(\"Seleccione una opción\\n1. Añadir producto\\n2. Vender producto\\n3. Consultar ventas\\n4. Salir\\n\"))",
+        "detail": "Tema 0.Colecciones.Ejercicio8",
+        "documentation": {}
+    },
+    {
+        "label": "products",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio8",
+        "description": "Tema 0.Colecciones.Ejercicio8",
+        "peekOfCode": "products = {}\n# Programa principal\noption = int(input(\"Seleccione una opción\\n1. Añadir producto\\n2. Vender producto\\n3. Consultar ventas\\n4. Salir\\n\"))\nwhile option != 4:\n    if option == 1:\n        product_name = input(\"Ingrese el nombre del producto a añadir: \")\n        if add_product(product_name):\n            print(f\"Producto '{product_name}' añadido correctamente.\")\n        else:\n            print(f\"El producto '{product_name}' ya existe.\")",
+        "detail": "Tema 0.Colecciones.Ejercicio8",
+        "documentation": {}
+    },
+    {
+        "label": "option",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio8",
+        "description": "Tema 0.Colecciones.Ejercicio8",
+        "peekOfCode": "option = int(input(\"Seleccione una opción\\n1. Añadir producto\\n2. Vender producto\\n3. Consultar ventas\\n4. Salir\\n\"))\nwhile option != 4:\n    if option == 1:\n        product_name = input(\"Ingrese el nombre del producto a añadir: \")\n        if add_product(product_name):\n            print(f\"Producto '{product_name}' añadido correctamente.\")\n        else:\n            print(f\"El producto '{product_name}' ya existe.\")\n    elif option == 2:\n        product_name = input(\"Ingrese el nombre del producto a vender: \")",
+        "detail": "Tema 0.Colecciones.Ejercicio8",
+        "documentation": {}
+    },
+    {
+        "label": "letters",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio9",
+        "description": "Tema 0.Colecciones.Ejercicio9",
+        "peekOfCode": "letters = {}\n# Solicitamos al usuario que introduzca una palabra\nword = input(\"Introduce una palabra: \")\n# Recorrer la palabra letra a letra\n# Comprobar si la letra ya está en el diccionario\n# Si está, incrementar su conteo\n# Si no está, añadirla al diccionario con un conteo de 1\nfor letter in word:\n    if letter in letters:\n        letters[letter] += 1",
+        "detail": "Tema 0.Colecciones.Ejercicio9",
+        "documentation": {}
+    },
+    {
+        "label": "word",
+        "kind": 5,
+        "importPath": "Tema 0.Colecciones.Ejercicio9",
+        "description": "Tema 0.Colecciones.Ejercicio9",
+        "peekOfCode": "word = input(\"Introduce una palabra: \")\n# Recorrer la palabra letra a letra\n# Comprobar si la letra ya está en el diccionario\n# Si está, incrementar su conteo\n# Si no está, añadirla al diccionario con un conteo de 1\nfor letter in word:\n    if letter in letters:\n        letters[letter] += 1\n    else:\n        letters[letter] = 1",
+        "detail": "Tema 0.Colecciones.Ejercicio9",
+        "documentation": {}
+    },
+    {
+        "label": "is_even",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio1",
+        "description": "Tema 0.Ejercicios.Ejercicio1",
+        "peekOfCode": "def is_even(number):\n    return number % 2 == 0\n# Solicitar al usuario que ingrese un numero\nnumber = int(input(\"Ingrese un numero: \"))\n# Mostrar el resultado\nprint(\"El numero \" + str(number) + \" es \" + (\"par\" if is_even(number) else \"impar\"))",
+        "detail": "Tema 0.Ejercicios.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio1",
+        "description": "Tema 0.Ejercicios.Ejercicio1",
+        "peekOfCode": "number = int(input(\"Ingrese un numero: \"))\n# Mostrar el resultado\nprint(\"El numero \" + str(number) + \" es \" + (\"par\" if is_even(number) else \"impar\"))",
+        "detail": "Tema 0.Ejercicios.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "maxNumber",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio10",
+        "description": "Tema 0.Ejercicios.Ejercicio10",
+        "peekOfCode": "def maxNumber(number1, number2):\n    biggest = number1\n    if number2 > number1:\n        biggest = number2\n    return biggest\n# Solicitar al usuario que introduzca dos números\nnumber1 = int(input(\"Introduce un número: \"))\nnumber2 = int(input(\"Introduce otro número: \"))\n# Mostrar el número más grande\nprint(\"El número más grande es:\", maxNumber(number1, number2))",
+        "detail": "Tema 0.Ejercicios.Ejercicio10",
+        "documentation": {}
+    },
+    {
+        "label": "number1",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio10",
+        "description": "Tema 0.Ejercicios.Ejercicio10",
+        "peekOfCode": "number1 = int(input(\"Introduce un número: \"))\nnumber2 = int(input(\"Introduce otro número: \"))\n# Mostrar el número más grande\nprint(\"El número más grande es:\", maxNumber(number1, number2))",
+        "detail": "Tema 0.Ejercicios.Ejercicio10",
+        "documentation": {}
+    },
+    {
+        "label": "number2",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio10",
+        "description": "Tema 0.Ejercicios.Ejercicio10",
+        "peekOfCode": "number2 = int(input(\"Introduce otro número: \"))\n# Mostrar el número más grande\nprint(\"El número más grande es:\", maxNumber(number1, number2))",
+        "detail": "Tema 0.Ejercicios.Ejercicio10",
+        "documentation": {}
+    },
+    {
+        "label": "isVowel",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio11",
+        "description": "Tema 0.Ejercicios.Ejercicio11",
+        "peekOfCode": "def isVowel(char):\n    vowels = \"aeiouAEIOU\"\n    return char in vowels\n# Solicitar al usuario que introduzca un carácter\nchar = input(\"Introduce un carácter: \")\n# Comprobar si el carácter es una vocal y mostrar el resultado\nprint(\"El carácter \" + \"es vocal\" if isVowel(char) else \"no es vocal\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio11",
+        "documentation": {}
+    },
+    {
+        "label": "char",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio11",
+        "description": "Tema 0.Ejercicios.Ejercicio11",
+        "peekOfCode": "char = input(\"Introduce un carácter: \")\n# Comprobar si el carácter es una vocal y mostrar el resultado\nprint(\"El carácter \" + \"es vocal\" if isVowel(char) else \"no es vocal\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio11",
+        "documentation": {}
+    },
+    {
+        "label": "calculadora",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio12",
+        "description": "Tema 0.Ejercicios.Ejercicio12",
+        "peekOfCode": "def calculadora(number1: int, number2: int, operation: int):\n    result = 0\n    # Realizar la operación según la elección del usuario\n    # 1: Suma, 2: Resta, 3: Multiplicación, 4: División\n    if operation == 1:\n        result = number1 + number2\n    elif operation == 2:\n        result = number1 - number2\n    elif operation == 3:\n        result = number1 * number2",
+        "detail": "Tema 0.Ejercicios.Ejercicio12",
+        "documentation": {}
+    },
+    {
+        "label": "num1",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio12",
+        "description": "Tema 0.Ejercicios.Ejercicio12",
+        "peekOfCode": "num1 = int(input(\"Introduce el primer número: \"))\nnum2 = int(input(\"Introduce el segundo número: \"))\n# Mostrar el menú de operaciones\nprint(\"Elige la operación a realizar:\")\nprint(\"1. Suma\\n2. Resta\\n3. Multiplicación\\n4. División\")\n# Solicitar al usuario la operación\nop = int(input(\"Operación (1/2/3/4): \"))\n# Calcular y mostrar el resultado\nresultado = calculadora(num1, num2, op)\nprint(f\"El resultado es: {resultado}\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio12",
+        "documentation": {}
+    },
+    {
+        "label": "num2",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio12",
+        "description": "Tema 0.Ejercicios.Ejercicio12",
+        "peekOfCode": "num2 = int(input(\"Introduce el segundo número: \"))\n# Mostrar el menú de operaciones\nprint(\"Elige la operación a realizar:\")\nprint(\"1. Suma\\n2. Resta\\n3. Multiplicación\\n4. División\")\n# Solicitar al usuario la operación\nop = int(input(\"Operación (1/2/3/4): \"))\n# Calcular y mostrar el resultado\nresultado = calculadora(num1, num2, op)\nprint(f\"El resultado es: {resultado}\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio12",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio12",
+        "description": "Tema 0.Ejercicios.Ejercicio12",
+        "peekOfCode": "op = int(input(\"Operación (1/2/3/4): \"))\n# Calcular y mostrar el resultado\nresultado = calculadora(num1, num2, op)\nprint(f\"El resultado es: {resultado}\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio12",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio12",
+        "description": "Tema 0.Ejercicios.Ejercicio12",
+        "peekOfCode": "resultado = calculadora(num1, num2, op)\nprint(f\"El resultado es: {resultado}\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio12",
+        "documentation": {}
+    },
+    {
+        "label": "printArray",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio2",
+        "description": "Tema 0.Ejercicios.Ejercicio2",
+        "peekOfCode": "def printArray(array):\n    # Construir el mensaje de salida\n    message = \"Los números ordenados son: \"\n    # Concatenar cada número al mensaje\n    for i in array:\n        message += str(i) + \" \"\n    # Imprimir el mensaje final\n    print(message)\n# Le preguntamos al usuario por el primer número\nnumber1 = int(input(\"Ingrese el primer numero: \"))",
+        "detail": "Tema 0.Ejercicios.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "number1",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio2",
+        "description": "Tema 0.Ejercicios.Ejercicio2",
+        "peekOfCode": "number1 = int(input(\"Ingrese el primer numero: \"))\n# Le preguntamos al usuario por el segundo número\nnumber2 = int(input(\"Ingrese el segundo numero: \"))\n# Creamos un array con los números ingresados y lo ordenamos\nnumbers = [number1, number2]\n# Ordenamos el array y lo imprimimos con la función\nprintArray(sorted(numbers))",
+        "detail": "Tema 0.Ejercicios.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "number2",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio2",
+        "description": "Tema 0.Ejercicios.Ejercicio2",
+        "peekOfCode": "number2 = int(input(\"Ingrese el segundo numero: \"))\n# Creamos un array con los números ingresados y lo ordenamos\nnumbers = [number1, number2]\n# Ordenamos el array y lo imprimimos con la función\nprintArray(sorted(numbers))",
+        "detail": "Tema 0.Ejercicios.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio2",
+        "description": "Tema 0.Ejercicios.Ejercicio2",
+        "peekOfCode": "numbers = [number1, number2]\n# Ordenamos el array y lo imprimimos con la función\nprintArray(sorted(numbers))",
+        "detail": "Tema 0.Ejercicios.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio3",
+        "description": "Tema 0.Ejercicios.Ejercicio3",
+        "peekOfCode": "number = 0\n# Variable para guardar la suma de los números positivos\nsum = 0\n# Bucle para pedir números hasta que se ingrese uno negativo\nwhile number >= 0:\n    # Si el número es positivo, se suma a la variable sum\n    sum += number\n    # Se pide un nuevo número\n    number = int(input(\"Ingrese un numero: \"))\n# Se muestra la suma de los números positivos",
+        "detail": "Tema 0.Ejercicios.Ejercicio3",
+        "documentation": {}
+    },
+    {
+        "label": "sum",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio3",
+        "description": "Tema 0.Ejercicios.Ejercicio3",
+        "peekOfCode": "sum = 0\n# Bucle para pedir números hasta que se ingrese uno negativo\nwhile number >= 0:\n    # Si el número es positivo, se suma a la variable sum\n    sum += number\n    # Se pide un nuevo número\n    number = int(input(\"Ingrese un numero: \"))\n# Se muestra la suma de los números positivos\nprint(\"La suma de los números positivos es: \" + str(sum))",
+        "detail": "Tema 0.Ejercicios.Ejercicio3",
+        "documentation": {}
+    },
+    {
+        "label": "guess",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio4",
+        "description": "Tema 0.Ejercicios.Ejercicio4",
+        "peekOfCode": "guess = 0\n# Genera un número aleatorio entre 1 y 100\nsecretNumber = random.randint(1, 100)\n# Pide al usuario que ingrese un número\nguess = int(input(\"Ingrese un número: \"))\n# Mientras el número ingresado no sea -1 (para salir) y no sea igual al número secreto\nwhile guess != -1 and guess != secretNumber:\n    # Indica si el número es mayor o menor que el número secreto\n    if guess > secretNumber:\n        print(\"El número es menor\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio4",
+        "documentation": {}
+    },
+    {
+        "label": "secretNumber",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio4",
+        "description": "Tema 0.Ejercicios.Ejercicio4",
+        "peekOfCode": "secretNumber = random.randint(1, 100)\n# Pide al usuario que ingrese un número\nguess = int(input(\"Ingrese un número: \"))\n# Mientras el número ingresado no sea -1 (para salir) y no sea igual al número secreto\nwhile guess != -1 and guess != secretNumber:\n    # Indica si el número es mayor o menor que el número secreto\n    if guess > secretNumber:\n        print(\"El número es menor\")\n    elif guess < secretNumber:\n        print(\"El número es mayor\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio4",
+        "documentation": {}
+    },
+    {
+        "label": "guess",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio4",
+        "description": "Tema 0.Ejercicios.Ejercicio4",
+        "peekOfCode": "guess = int(input(\"Ingrese un número: \"))\n# Mientras el número ingresado no sea -1 (para salir) y no sea igual al número secreto\nwhile guess != -1 and guess != secretNumber:\n    # Indica si el número es mayor o menor que el número secreto\n    if guess > secretNumber:\n        print(\"El número es menor\")\n    elif guess < secretNumber:\n        print(\"El número es mayor\")\n    # Pide al usuario que ingrese otro número\n    guess = int(input(\"Ingrese otro número: \"))",
+        "detail": "Tema 0.Ejercicios.Ejercicio4",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio5",
+        "description": "Tema 0.Ejercicios.Ejercicio5",
+        "peekOfCode": "number = int(input(\"Ingrese un numero: \"))\n# Contador para los números desde 1 hasta el número ingresado\ncounter = 1\n# Mientras el contador sea menor o igual al número ingresado, imprimimos el contador y lo incrementamos\nwhile counter <= number:\n    print(counter)\n    counter += 1",
+        "detail": "Tema 0.Ejercicios.Ejercicio5",
+        "documentation": {}
+    },
+    {
+        "label": "counter",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio5",
+        "description": "Tema 0.Ejercicios.Ejercicio5",
+        "peekOfCode": "counter = 1\n# Mientras el contador sea menor o igual al número ingresado, imprimimos el contador y lo incrementamos\nwhile counter <= number:\n    print(counter)\n    counter += 1",
+        "detail": "Tema 0.Ejercicios.Ejercicio5",
+        "documentation": {}
+    },
+    {
+        "label": "factorial",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio6",
+        "description": "Tema 0.Ejercicios.Ejercicio6",
+        "peekOfCode": "def factorial(number):\n    # Multiplicador para el bucle\n    multiplier = number - 1\n    # Variable para almacenar el resultado del factorial\n    factorial = number\n    # Mientras el multiplicador sea mayor que 0\n    while multiplier > 0:\n        # Multiplicar el factorial por el multiplicador y decrementar el multiplicador\n        factorial *= multiplier\n        multiplier -= 1",
+        "detail": "Tema 0.Ejercicios.Ejercicio6",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio6",
+        "description": "Tema 0.Ejercicios.Ejercicio6",
+        "peekOfCode": "number = int(input(\"Ingrese un numero: \"))\n# Imprimir el resultado del factorial\nprint(\"El factorial de \" + str(number) + \" es \" + str(factorial(number)))",
+        "detail": "Tema 0.Ejercicios.Ejercicio6",
+        "documentation": {}
+    },
+    {
+        "label": "isPrime",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio7",
+        "description": "Tema 0.Ejercicios.Ejercicio7",
+        "peekOfCode": "def isPrime(number):\n    # Variable para contar los divisores del número que ha entrado por parámetro de entrada\n    divisors = 0\n    # Bucle para contar los divisores del número\n    for i in range(1, number + 1):\n        if number % i == 0:\n            divisors += 1\n    # Un número es primo si tiene exactamente dos divisores: 1 y él mismo\n    return divisors == 2\n# Solicitar al usuario que introduzca un número",
+        "detail": "Tema 0.Ejercicios.Ejercicio7",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio7",
+        "description": "Tema 0.Ejercicios.Ejercicio7",
+        "peekOfCode": "number = int(input(\"Introduce un número: \"))\n# Mostrar si el número es primo o no\nprint(f\"El número {number} {'es' if isPrime(number) else 'no es'} primo.\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio7",
+        "documentation": {}
+    },
+    {
+        "label": "printTriangle",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio8",
+        "description": "Tema 0.Ejercicios.Ejercicio8",
+        "peekOfCode": "def printTriangle(length):\n    # Cantidad de espacios en blanco antes del primer asterisco de la fila\n    firstSpace = length - 1\n    # Cantidad de asteriscos en la fila\n    starsCount = 1\n    # Iterar sobre cada fila del triángulo\n    for i in range(1, length + 1):\n        # Imprimir los espacios en blanco antes del primer asterisco\n        for j in range(firstSpace):\n            print(\" \", end=\"\")",
+        "detail": "Tema 0.Ejercicios.Ejercicio8",
+        "documentation": {}
+    },
+    {
+        "label": "length",
+        "kind": 5,
+        "importPath": "Tema 0.Ejercicios.Ejercicio8",
+        "description": "Tema 0.Ejercicios.Ejercicio8",
+        "peekOfCode": "length = int(input(\"Introduce la longitud del triángulo: \"))\n# Llamar a la función para imprimir el triángulo\nprintTriangle(length)",
+        "detail": "Tema 0.Ejercicios.Ejercicio8",
+        "documentation": {}
+    },
+    {
+        "label": "printNumbers",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio9",
+        "description": "Tema 0.Ejercicios.Ejercicio9",
+        "peekOfCode": "def printNumbers(from_num, to_num):\n    for i in range(from_num, to_num + 1):\n        print(i)\n# Método main para ejecutar el programa\ndef main():\n    # Solicitar al usuario los números inicial y final\n    from_num = int(input(\"Introduce el número inicial: \"))\n    to_num = int(input(\"Introduce el número final: \"))\n    # Llamar a la función para imprimir los números en el rango dado\n    printNumbers(from_num, to_num)",
+        "detail": "Tema 0.Ejercicios.Ejercicio9",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Ejercicios.Ejercicio9",
+        "description": "Tema 0.Ejercicios.Ejercicio9",
+        "peekOfCode": "def main():\n    # Solicitar al usuario los números inicial y final\n    from_num = int(input(\"Introduce el número inicial: \"))\n    to_num = int(input(\"Introduce el número final: \"))\n    # Llamar a la función para imprimir los números en el rango dado\n    printNumbers(from_num, to_num)\n# Ejecutar el método main\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Tema 0.Ejercicios.Ejercicio9",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Ficheros.Ejercicio1.Main",
+        "description": "Tema 0.Ficheros.Ejercicio1.Main",
+        "peekOfCode": "def main():\n    os.chdir(\"Tema 0/Ficheros/Ejercicio1\")\n    fichero = open(\"Alumnos.txt\", \"rt\")\n    for linea in fichero:\n        print(linea, end=\"\")\n    fichero.close()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Tema 0.Ficheros.Ejercicio1.Main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Ficheros.Ejercicio2.Main",
+        "description": "Tema 0.Ficheros.Ejercicio2.Main",
+        "peekOfCode": "def main():\n    os.chdir(\"Tema 0/Ficheros/Ejercicio2\")\n    fichero = open(\"Cadenas.txt\", \"w\")\n    cadena = input(\"Introduce una cadena (escribe fin para terminar): \")\n    while cadena != \"fin\":\n        fichero.write(cadena + \"\\n\")\n        cadena = input(\"Introduce otra cadena: \")\n    fichero.close()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Tema 0.Ficheros.Ejercicio2.Main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Ficheros.Ejercicio3.Main",
+        "description": "Tema 0.Ficheros.Ejercicio3.Main",
+        "peekOfCode": "def main():\n    os.chdir(\"Tema 0/Ficheros/Ejercicio3\")\n    fichero = open(\"datos.txt\", \"a\")\n    datos = (input(\"Introduce el nombre: \"), input(\"Introduce la edad: \"))\n    fichero.write(datos[0] + \" \" + datos[1] + \"\\n\")\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Tema 0.Ficheros.Ejercicio3.Main",
+        "documentation": {}
+    },
+    {
+        "label": "NoPerecedero",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio3.entidades.NoPerecedero",
+        "description": "Tema 0.Herencias.Ejercicio3.entidades.NoPerecedero",
+        "peekOfCode": "class NoPerecedero(Producto):\n    def __init__(self, nombre, precio, tipo):\n        super().__init__(nombre, precio)\n        self.tipo = tipo\n    def calcular(self, cantidad):\n        return self.precio * cantidad",
+        "detail": "Tema 0.Herencias.Ejercicio3.entidades.NoPerecedero",
+        "documentation": {}
+    },
+    {
+        "label": "Perecedero",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio3.entidades.Perecedero",
+        "description": "Tema 0.Herencias.Ejercicio3.entidades.Perecedero",
+        "peekOfCode": "class Perecedero(Producto):\n    def __init__(self, nombre, precio, dias_a_caducar):\n        super().__init__(nombre, precio)\n        self.dias_a_caducar = dias_a_caducar\n    def calcular(self, cantidad):\n        precio_final = self.precio\n        if self.dias_a_caducar == 1:\n            precio_final /= 4\n        elif self.dias_a_caducar == 2:\n            precio_final /= 3",
+        "detail": "Tema 0.Herencias.Ejercicio3.entidades.Perecedero",
+        "documentation": {}
+    },
+    {
+        "label": "Producto",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio3.entidades.Producto",
+        "description": "Tema 0.Herencias.Ejercicio3.entidades.Producto",
+        "peekOfCode": "class Producto:\n    def __init__(self, nombre, precio):\n        self.nombre = nombre\n        self.precio = precio\n    def calcular(self, cantidad):\n        return self.precio * cantidad\n    def __str__(self):\n        return f\"Producto: {self.nombre}, Precio: ${self.precio}\"\n    def __lt__(self, other):\n        return self.precio < other.precio",
+        "detail": "Tema 0.Herencias.Ejercicio3.entidades.Producto",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Herencias.Ejercicio3.Main",
+        "description": "Tema 0.Herencias.Ejercicio3.Main",
+        "peekOfCode": "def main():\n    \"\"\"\n    Función principal para probar las clases de productos.\n    \"\"\"\n    # 1. Creamos una lista con varios productos de diferentes tipos\n    lista_productos = [\n        Perecedero(\"Leche\", 1.20, 1),        # Con gran descuento (precio / 4)\n        Perecedero(\"Yogur\", 1.50, 2),        # Con descuento medio (precio / 3)\n        Perecedero(\"Queso\", 3.00, 3),         # Con descuento bajo (precio / 2)\n        Perecedero(\"Pan de molde\", 2.40, 10), # Sin descuento",
+        "detail": "Tema 0.Herencias.Ejercicio3.Main",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio1",
+        "description": "Tema 0.Herencias.Ejercicio1",
+        "peekOfCode": "class Animal:\n    def __init__(self, nombre, patas):\n        self.nombre = nombre\n        self.patas = patas\n    def habla(self):\n        return \"\"\n    def __str__(self):\n        return f\"Me llamo {self.nombre}, tengo {self.patas} patas y sueno así: {self.habla()}.\"\n# Clase hija Gato\nclass Gato(Animal):",
+        "detail": "Tema 0.Herencias.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "Gato",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio1",
+        "description": "Tema 0.Herencias.Ejercicio1",
+        "peekOfCode": "class Gato(Animal):\n    def __init__(self, nombre):\n        super().__init__(nombre, 4)\n    def habla(self):\n        return \"Miau\"\n    def __str__(self):\n        return \"Soy un gato. \" + super().__str__()\n# Clase hija Perro\nclass Perro(Animal):\n    def __init__(self, nombre):",
+        "detail": "Tema 0.Herencias.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "Perro",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio1",
+        "description": "Tema 0.Herencias.Ejercicio1",
+        "peekOfCode": "class Perro(Animal):\n    def __init__(self, nombre):\n        super().__init__(nombre, 4)\n    def habla(self):\n        return \"Guau\"\n    def __str__(self):\n        return \"Soy un perro. \" + super().__str__()\n# Función principal para probar las clases\ndef main():\n    gato = Gato(\"Michi\")",
+        "detail": "Tema 0.Herencias.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Herencias.Ejercicio1",
+        "description": "Tema 0.Herencias.Ejercicio1",
+        "peekOfCode": "def main():\n    gato = Gato(\"Michi\")\n    perro = Perro(\"Firulais\")\n    print(gato)\n    print(perro)\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Tema 0.Herencias.Ejercicio1",
+        "documentation": {}
+    },
+    {
+        "label": "Empleado",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio2",
+        "description": "Tema 0.Herencias.Ejercicio2",
+        "peekOfCode": "class Empleado:\n    def __init__(self, nombre):\n        self.nombre = nombre\n    def __str__(self):\n        return f\"Empleado {self.nombre}\"\nclass Operario(Empleado):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Operario\"",
+        "detail": "Tema 0.Herencias.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "Operario",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio2",
+        "description": "Tema 0.Herencias.Ejercicio2",
+        "peekOfCode": "class Operario(Empleado):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Operario\"\nclass Directivo(Empleado):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Directivo\"",
+        "detail": "Tema 0.Herencias.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "Directivo",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio2",
+        "description": "Tema 0.Herencias.Ejercicio2",
+        "peekOfCode": "class Directivo(Empleado):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Directivo\"\nclass Oficial(Operario):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Oficial\"",
+        "detail": "Tema 0.Herencias.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "Oficial",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio2",
+        "description": "Tema 0.Herencias.Ejercicio2",
+        "peekOfCode": "class Oficial(Operario):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Oficial\"\nclass Tecnico(Operario):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Técnico\"",
+        "detail": "Tema 0.Herencias.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "Tecnico",
+        "kind": 6,
+        "importPath": "Tema 0.Herencias.Ejercicio2",
+        "description": "Tema 0.Herencias.Ejercicio2",
+        "peekOfCode": "class Tecnico(Operario):\n    def __init__(self, nombre):\n        super().__init__(nombre)\n    def __str__(self):\n        return super().__str__() + \" -> Técnico\"\ndef main():\n    empleados = [\n        Empleado(\"Rafa\"),\n        Directivo(\"Mario\"),\n        Operario(\"Alfonso\"),",
+        "detail": "Tema 0.Herencias.Ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Herencias.Ejercicio2",
+        "description": "Tema 0.Herencias.Ejercicio2",
+        "peekOfCode": "def main():\n    empleados = [\n        Empleado(\"Rafa\"),\n        Directivo(\"Mario\"),\n        Operario(\"Alfonso\"),\n        Oficial(\"Luis\"),\n        Tecnico(\"Pablo\")\n    ]\n    for empleado in empleados:\n        print(empleado)",
+        "detail": "Tema 0.Herencias.Ejercicio2",
+        "documentation": {}
+    }
+]
