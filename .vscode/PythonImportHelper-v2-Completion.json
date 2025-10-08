@@ -671,6 +671,15 @@
         "documentation": {}
     },
     {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Tema 0.Ficheros.Ejercicio4.Main",
+        "description": "Tema 0.Ficheros.Ejercicio4.Main",
+        "peekOfCode": "def main():\n    os.chdir(\"Tema 0/Ficheros/Ejercicio4\")\n    fichero = open(\"numeros.txt\", \"rt\")\n    numeros = []\n    for linea in fichero:\n        numeros.append(linea)\n    print(numeros)\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Tema 0.Ficheros.Ejercicio4.Main",
+        "documentation": {}
+    },
+    {
         "label": "NoPerecedero",
         "kind": 6,
         "importPath": "Tema 0.Herencias.Ejercicio3.entidades.NoPerecedero",
