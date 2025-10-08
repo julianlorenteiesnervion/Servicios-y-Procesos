@@ -1,3 +1,5 @@
+from .Producto import *
+
 class Perecedero(Producto):
     def __init__(self, nombre, precio, dias_a_caducar):
         super().__init__(nombre, precio)
