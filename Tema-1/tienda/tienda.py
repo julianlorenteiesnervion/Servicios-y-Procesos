@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import random
 
@@ -33,7 +33,7 @@ lista_tiendas = [
     for i in range(20)
 ]
 
-# Métodos get
+#region Métodos get
 # Obtener todas las tiendas
 @app.get("/tiendas")
 def tiendas():
@@ -41,27 +41,71 @@ def tiendas():
 
 # Obtener tienda por id
 @app.get("/tiendas/id/{id}")
-def tiendaId(id: int):
-    return obtenerTiendaPorId(id)
+def tienda_id(id: int):
+    return obtener_tienda_por_id(id)
 
 # Obtener tienda por domicilio
 @app.get("/tiendas/domicilio/{domicilio}")
-def tiendaDomicilio(domicilio: str):
-    return obtenerTiendaPorDomicilio(domicilio)
+def tienda_domicilio(domicilio: str):
+    return obtener_tienda_por_domicilio(domicilio)
 
 # Obtener tienda por telefono
 @app.get("/tiendas/telefono/{telefono}")
-def tiendaTelefono(telefono: int):
-    return obtenerTiendaPorTelefono(telefono)
+def tienda_telefono(telefono: int):
+    return obtener_tienda_por_telefono(telefono)
 
 # Obtener tiendas por precio de alquiler
 @app.get("/tiendas/precio_alquiler/{precio_alquiler}")
-def tiendaPrecioAlquiler(precio_alquiler: int):
-    return obtenerTiendasPorPrecioAlquiler(precio_alquiler)
+def tienda_precio_alquiler(precio_alquiler: int):
+    return obtener_tiendas_por_precio_alquiler(precio_alquiler)
 
-# Métodos internos
+#endregion
+
+#region Métodos post
+# Añadir una tienda
+@app.post("/tiendas", status_code = 201, response_model = Tienda)
+def add_tienda(tienda: Tienda):
+
+    # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada
+    tienda.id = ultima_id()
+
+    # Añadimos la tienda con su nueva id a la lista de tiendas
+    lista_tiendas.append(tienda)
+
+    # Devolvemos la tienda
+    return tienda
+
+#endregion
+
+#region Métodos put
+# Método para modificar una tienda
+@app.put("/tiendas/id/{id}")
+def modificar_tienda(id: int, tienda: Tienda):
+    for index, saved_tienda in enumerate(lista_tiendas):
+        if saved_tienda.id == id:
+            tienda.id = id
+            lista_tiendas[index] = tienda
+            return tienda
+        
+    raise HTTPException(status_code = 404, detail = "Tienda no encontrada")
+
+#endregion
+
+#region Métodos delete
+# Método para eliminar una tienda
+@app.delete("/tiendas/id/{id}")
+def eliminar_tienda(id: int):
+    for saved_tienda in lista_tiendas:
+        if saved_tienda.id == id:
+            lista_tiendas.remove(saved_tienda)
+            return {}
+    raise HTTPException(status_code = 404, detail = "Tienda no encontrada.")
+
+#endregion
+
+#region Métodos internos
 # Método para la búsqueda de tiendas por id
-def obtenerTiendaPorId(id: int):
+def obtener_tienda_por_id(id: int):
     for tienda in lista_tiendas:
         if tienda.id == id:
             return tienda
@@ -69,7 +113,7 @@ def obtenerTiendaPorId(id: int):
     return {"Error": "No se ha encontrado ninguna tienda por la id " + id}
 
 # Método para obtener tiendas por domicilio
-def obtenerTiendaPorDomicilio(domicilio: str):
+def obtener_tienda_por_domicilio(domicilio: str):
     for tienda in lista_tiendas:
         if tienda.domicilio == domicilio:
             return tienda
@@ -77,7 +121,7 @@ def obtenerTiendaPorDomicilio(domicilio: str):
     return {"Error": "No se ha encontrado ninguna tienda por el domicilio " + domicilio}
 
 # Método para obtener tiendas por teléfono
-def obtenerTiendaPorTelefono(telefono: int):
+def obtener_tienda_por_telefono(telefono: int):
     for tienda in lista_tiendas:
         if tienda.telefono == telefono:
             return tienda
@@ -85,11 +129,17 @@ def obtenerTiendaPorTelefono(telefono: int):
     return {"Error": "No se ha encontrado ninguna tienda por el teléfono " + telefono}
 
 # Método para obtener tiendas por el precio del alquiler
-def obtenerTiendasPorPrecioAlquiler(precio_alquiler: int):
-    tiendasPorPrecioAlquiler = []
+def obtener_tiendas_por_precio_alquiler(precio_alquiler: int):
+    tiendas_por_precio_alquiler = []
 
     for tienda in lista_tiendas:
         if tienda.precio_alquiler == precio_alquiler:
-            tiendasPorPrecioAlquiler.append(tienda)
+            tiendas_por_precio_alquiler.append(tienda)
     
-    return tiendasPorPrecioAlquiler
+    return tiendas_por_precio_alquiler
+
+# Método para obtener la última id
+def ultima_id():
+    return (max(lista_tiendas, key = id).id + 1)
+
+#endregion

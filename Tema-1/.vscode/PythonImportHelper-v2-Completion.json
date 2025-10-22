@@ -1,0 +1,144 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Tienda",
+        "kind": 6,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "class Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",\n    \"Calle Hidalgo 12\", \"Av. Universidad 234\", \"Calle Morelos 56\",\n    \"Av. Central 789\", \"Calle Independencia 90\", \"Boulevard Benito Juárez 321\",",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "tiendas",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def tiendas():\n    return lista_tiendas\n# Obtener tienda por id\n@app.get(\"/tiendas/id/{id}\")\ndef tiendaId(id: int):\n    return obtenerTiendaPorId(id)\n# Obtener tienda por domicilio\n@app.get(\"/tiendas/domicilio/{domicilio}\")\ndef tiendaDomicilio(domicilio: str):\n    return obtenerTiendaPorDomicilio(domicilio)",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "tiendaId",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def tiendaId(id: int):\n    return obtenerTiendaPorId(id)\n# Obtener tienda por domicilio\n@app.get(\"/tiendas/domicilio/{domicilio}\")\ndef tiendaDomicilio(domicilio: str):\n    return obtenerTiendaPorDomicilio(domicilio)\n# Obtener tienda por telefono\n@app.get(\"/tiendas/telefono/{telefono}\")\ndef tiendaTelefono(telefono: int):\n    return obtenerTiendaPorTelefono(telefono)",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "tiendaDomicilio",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def tiendaDomicilio(domicilio: str):\n    return obtenerTiendaPorDomicilio(domicilio)\n# Obtener tienda por telefono\n@app.get(\"/tiendas/telefono/{telefono}\")\ndef tiendaTelefono(telefono: int):\n    return obtenerTiendaPorTelefono(telefono)\n# Obtener tiendas por precio de alquiler\n@app.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tiendaPrecioAlquiler(precio_alquiler: int):\n    return obtenerTiendasPorPrecioAlquiler(precio_alquiler)",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "tiendaTelefono",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def tiendaTelefono(telefono: int):\n    return obtenerTiendaPorTelefono(telefono)\n# Obtener tiendas por precio de alquiler\n@app.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tiendaPrecioAlquiler(precio_alquiler: int):\n    return obtenerTiendasPorPrecioAlquiler(precio_alquiler)\n# Métodos internos\n# Método para la búsqueda de tiendas por id\ndef obtenerTiendaPorId(id: int):\n    for tienda in lista_tiendas:",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "tiendaPrecioAlquiler",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def tiendaPrecioAlquiler(precio_alquiler: int):\n    return obtenerTiendasPorPrecioAlquiler(precio_alquiler)\n# Métodos internos\n# Método para la búsqueda de tiendas por id\ndef obtenerTiendaPorId(id: int):\n    for tienda in lista_tiendas:\n        if tienda.id == id:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por la id \" + id}\n# Método para obtener tiendas por domicilio",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "obtenerTiendaPorId",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def obtenerTiendaPorId(id: int):\n    for tienda in lista_tiendas:\n        if tienda.id == id:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por la id \" + id}\n# Método para obtener tiendas por domicilio\ndef obtenerTiendaPorDomicilio(domicilio: str):\n    for tienda in lista_tiendas:\n        if tienda.domicilio == domicilio:\n            return tienda",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "obtenerTiendaPorDomicilio",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def obtenerTiendaPorDomicilio(domicilio: str):\n    for tienda in lista_tiendas:\n        if tienda.domicilio == domicilio:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por el domicilio \" + domicilio}\n# Método para obtener tiendas por teléfono\ndef obtenerTiendaPorTelefono(telefono: int):\n    for tienda in lista_tiendas:\n        if tienda.telefono == telefono:\n            return tienda",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "obtenerTiendaPorTelefono",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def obtenerTiendaPorTelefono(telefono: int):\n    for tienda in lista_tiendas:\n        if tienda.telefono == telefono:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por el teléfono \" + telefono}\n# Método para obtener tiendas por el precio del alquiler\ndef obtenerTiendasPorPrecioAlquiler(precio_alquiler: int):\n    tiendasPorPrecioAlquiler = []\n    for tienda in lista_tiendas:\n        if tienda.precio_alquiler == precio_alquiler:",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "obtenerTiendasPorPrecioAlquiler",
+        "kind": 2,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "def obtenerTiendasPorPrecioAlquiler(precio_alquiler: int):\n    tiendasPorPrecioAlquiler = []\n    for tienda in lista_tiendas:\n        if tienda.precio_alquiler == precio_alquiler:\n            tiendasPorPrecioAlquiler.append(tienda)\n    return tiendasPorPrecioAlquiler",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "app = FastAPI()\n# Entidad tienda\nclass Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "domicilios",
+        "kind": 5,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "domicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",\n    \"Calle Hidalgo 12\", \"Av. Universidad 234\", \"Calle Morelos 56\",\n    \"Av. Central 789\", \"Calle Independencia 90\", \"Boulevard Benito Juárez 321\",\n    \"Calle Zaragoza 67\", \"Av. Madero 101\", \"Calle 5 de Mayo 202\",\n    \"Boulevard López Mateos 303\", \"Calle Allende 404\", \"Av. Las Palmas 505\",\n    \"Calle Matamoros 606\", \"Boulevard Miguel Alemán 707\", \"Calle Victoria 808\",\n    \"Av. Constitución 909\", \"Calle Lerdo 100\"\n]\n# Lista de tiendas",
+        "detail": "tienda.main",
+        "documentation": {}
+    },
+    {
+        "label": "lista_tiendas",
+        "kind": 5,
+        "importPath": "tienda.main",
+        "description": "tienda.main",
+        "peekOfCode": "lista_tiendas = [\n    Tienda(\n        id=i+1,\n        domicilio=domicilios[i],\n        telefono=random.randint(5500000000, 5599999999),\n        precio_alquiler=random.randint(5000, 25000)\n    )\n    for i in range(20)\n]\n# Métodos get",
+        "detail": "tienda.main",
+        "documentation": {}
+    }
+]
