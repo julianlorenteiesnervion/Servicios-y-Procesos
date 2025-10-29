@@ -1,8 +1,8 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import HTTPException, APIRouter
 from pydantic import BaseModel
 import random
 
-app = FastAPI()
+router = APIRouter()
 
 # Entidad empleado
 class Empleado(BaseModel):
@@ -41,37 +41,37 @@ lista_empleados = [
 
 #region Métodos get
 # Obtener todos los empleados
-@app.get("/empleados")
+@router.get("/empleados")
 def empleados():
     return lista_empleados
 
 # Obtener empleado por id
-@app.get("/empleados/id/{id}")
+@router.get("/empleados/id/{id}")
 def empleado_id(id: int):
     return obtener_empleado_por_id(id)
 
 # Obtener empleado por nombre
-@app.get("/empleados/nombre/{nombre}")
+@router.get("/empleados/nombre/{nombre}")
 def empleado_nombre(nombre: str):
     return obtener_empleados_por_nombre(nombre)
 
 # Obtener empleado por apellidos
-@app.get("/empleados/apellidos/{apellidos}")
+@router.get("/empleados/apellidos/{apellidos}")
 def empleado_apellidos(apellidos: str):
     return obtener_empleados_por_apellidos(apellidos)
 
 # Obtener empleado por teléfono
-@app.get("/empleados/telefono/{telefono}")
+@router.get("/empleados/telefono/{telefono}")
 def empleado_telefono(telefono: int):
     return obtener_empleado_por_telefono(telefono)
 
 # Obtener empleado por correo
-@app.get("/empleados/correo/{correo}")
+@router.get("/empleados/correo/{correo}")
 def empleado_correo(correo: str):
     return obtener_empleado_por_correo(correo)
 
 # Obtener empleados por IdTienda
-@app.get("/empleados/id_tienda/{id_tienda}")
+@router.get("/empleados/id_tienda/{id_tienda}")
 def empleados_por_tienda(id_tienda: int):
     return obtener_empleados_por_id_tienda(id_tienda)
 
@@ -79,7 +79,7 @@ def empleados_por_tienda(id_tienda: int):
 
 #region Métodos post
 # Añadir un empleado
-@app.post("/empleados", status_code = 201, response_model = Empleado)
+@router.post("/empleados", status_code = 201, response_model = Empleado)
 def add_empleado(empleado: Empleado):
 
     # Calculamos la siguiente id y machacamos la que llegó en el empleado por parámetro de entrada
@@ -95,7 +95,7 @@ def add_empleado(empleado: Empleado):
 
 #region Métodos put
 # Método para modificar un empleado
-@app.put("/empleados/id/{id}")
+@router.put("/empleados/id/{id}")
 def modificar_empleado(id: int, empleado: Empleado):
     for index, saved_empleado in enumerate(lista_empleados):
         if saved_empleado.id == id:
@@ -109,7 +109,7 @@ def modificar_empleado(id: int, empleado: Empleado):
 
 #region Métodos delete
 # Método para eliminar un empleado
-@app.delete("/empleados/id/{id}")
+@router.delete("/empleados/id/{id}")
 def eliminar_empleado(id: int):
     for saved_empleado in lista_empleados:
         if saved_empleado.id == id:

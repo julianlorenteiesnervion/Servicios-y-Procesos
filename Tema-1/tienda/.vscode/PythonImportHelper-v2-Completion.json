@@ -1,6 +1,22 @@
 [
     {
-        "label": "FastAPI",
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -13,6 +29,22 @@
         "description": "fastapi",
         "isExtraImport": true,
         "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -33,156 +65,388 @@
         "documentation": {}
     },
     {
-        "label": "Tienda",
+        "label": "empleado",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "tienda",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "Empleado",
         "kind": 6,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "class Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",\n    \"Calle Hidalgo 12\", \"Av. Universidad 234\", \"Calle Morelos 56\",\n    \"Av. Central 789\", \"Calle Independencia 90\", \"Boulevard Benito Juárez 321\",",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "class Empleado(BaseModel):\n    id: int\n    nombre: str\n    apellidos: str\n    telefono: int\n    correo: str\n    num_cuenta: str\n    id_tienda: int\n# Listas de nombres y apellidos\nnombres = [",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "tiendas",
+        "label": "empleados",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def tiendas():\n    return lista_tiendas\n# Obtener tienda por id\n@app.get(\"/tiendas/id/{id}\")\ndef tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@app.get(\"/tiendas/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def empleados():\n    return lista_empleados\n# Obtener empleado por id\n@router.get(\"/empleados/id/{id}\")\ndef empleado_id(id: int):\n    return obtener_empleado_por_id(id)\n# Obtener empleado por nombre\n@router.get(\"/empleados/nombre/{nombre}\")\ndef empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "tienda_id",
+        "label": "empleado_id",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@app.get(\"/tiendas/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@app.get(\"/tiendas/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def empleado_id(id: int):\n    return obtener_empleado_por_id(id)\n# Obtener empleado por nombre\n@router.get(\"/empleados/nombre/{nombre}\")\ndef empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)\n# Obtener empleado por apellidos\n@router.get(\"/empleados/apellidos/{apellidos}\")\ndef empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "tienda_domicilio",
+        "label": "empleado_nombre",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@app.get(\"/tiendas/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@app.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)\n# Obtener empleado por apellidos\n@router.get(\"/empleados/apellidos/{apellidos}\")\ndef empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)\n# Obtener empleado por teléfono\n@router.get(\"/empleados/telefono/{telefono}\")\ndef empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "tienda_telefono",
+        "label": "empleado_apellidos",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@app.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@app.post(\"/tiendas\", status_code = 201, response_model = Tienda)",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)\n# Obtener empleado por teléfono\n@router.get(\"/empleados/telefono/{telefono}\")\ndef empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)\n# Obtener empleado por correo\n@router.get(\"/empleados/correo/{correo}\")\ndef empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "tienda_precio_alquiler",
+        "label": "empleado_telefono",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@app.post(\"/tiendas\", status_code = 201, response_model = Tienda)\ndef add_tienda(tienda: Tienda):\n    # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada\n    tienda.id = ultima_id()\n    # Añadimos la tienda con su nueva id a la lista de tiendas",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)\n# Obtener empleado por correo\n@router.get(\"/empleados/correo/{correo}\")\ndef empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)\n# Obtener empleados por IdTienda\n@router.get(\"/empleados/id_tienda/{id_tienda}\")\ndef empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "add_tienda",
+        "label": "empleado_correo",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def add_tienda(tienda: Tienda):\n    # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada\n    tienda.id = ultima_id()\n    # Añadimos la tienda con su nueva id a la lista de tiendas\n    lista_tiendas.append(tienda)\n    # Devolvemos la tienda\n    return tienda\n#endregion\n#region Métodos put\n# Método para modificar una tienda",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)\n# Obtener empleados por IdTienda\n@router.get(\"/empleados/id_tienda/{id_tienda}\")\ndef empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)\n#endregion\n#region Métodos post\n# Añadir un empleado\n@router.post(\"/empleados\", status_code = 201, response_model = Empleado)",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "modificar_tienda",
+        "label": "empleados_por_tienda",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def modificar_tienda(id: int, tienda: Tienda):\n    for index, saved_tienda in enumerate(lista_tiendas):\n        if saved_tienda.id == id:\n            tienda.id = id\n            lista_tiendas[index] = tienda\n            return tienda\n    raise HTTPException(status_code = 404, detail = \"Tienda no encontrada\")\n#endregion\n#region Métodos delete\n# Método para eliminar una tienda",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)\n#endregion\n#region Métodos post\n# Añadir un empleado\n@router.post(\"/empleados\", status_code = 201, response_model = Empleado)\ndef add_empleado(empleado: Empleado):\n    # Calculamos la siguiente id y machacamos la que llegó en el empleado por parámetro de entrada\n    empleado.id = ultima_id()\n    # Añadimos el empleado con su nueva id a la lista de empleados",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "eliminar_tienda",
+        "label": "add_empleado",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def eliminar_tienda(id: int):\n    for saved_tienda in lista_tiendas:\n        if saved_tienda.id == id:\n            lista_tiendas.remove(saved_tienda)\n            return {}\n    raise HTTPException(status_code = 404, detail = \"Tienda no encontrada.\")\n#endregion\n#region Métodos internos\n# Método para la búsqueda de tiendas por id\ndef obtener_tienda_por_id(id: int):",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def add_empleado(empleado: Empleado):\n    # Calculamos la siguiente id y machacamos la que llegó en el empleado por parámetro de entrada\n    empleado.id = ultima_id()\n    # Añadimos el empleado con su nueva id a la lista de empleados\n    lista_empleados.append(empleado)\n    # Devolvemos el empleado\n    return empleado\n#endregion\n#region Métodos put\n# Método para modificar un empleado",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "obtener_tienda_por_id",
+        "label": "modificar_empleado",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def obtener_tienda_por_id(id: int):\n    for tienda in lista_tiendas:\n        if tienda.id == id:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por la id \" + id}\n# Método para obtener tiendas por domicilio\ndef obtener_tienda_por_domicilio(domicilio: str):\n    for tienda in lista_tiendas:\n        if tienda.domicilio == domicilio:\n            return tienda",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def modificar_empleado(id: int, empleado: Empleado):\n    for index, saved_empleado in enumerate(lista_empleados):\n        if saved_empleado.id == id:\n            empleado.id = id\n            lista_empleados[index] = empleado\n            return empleado\n    raise HTTPException(status_code = 404, detail = \"Empleado no encontrado\")\n#endregion\n#region Métodos delete\n# Método para eliminar un empleado",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "obtener_tienda_por_domicilio",
+        "label": "eliminar_empleado",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def obtener_tienda_por_domicilio(domicilio: str):\n    for tienda in lista_tiendas:\n        if tienda.domicilio == domicilio:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por el domicilio \" + domicilio}\n# Método para obtener tiendas por teléfono\ndef obtener_tienda_por_telefono(telefono: int):\n    for tienda in lista_tiendas:\n        if tienda.telefono == telefono:\n            return tienda",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def eliminar_empleado(id: int):\n    for saved_empleado in lista_empleados:\n        if saved_empleado.id == id:\n            lista_empleados.remove(saved_empleado)\n            return {}\n    raise HTTPException(status_code = 404, detail = \"Empleado no encontrado.\")\n#endregion\n#region Métodos internos\n# Método para la búsqueda de empleados por id\ndef obtener_empleado_por_id(id: int):",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "obtener_tienda_por_telefono",
+        "label": "obtener_empleado_por_id",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def obtener_tienda_por_telefono(telefono: int):\n    for tienda in lista_tiendas:\n        if tienda.telefono == telefono:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por el teléfono \" + telefono}\n# Método para obtener tiendas por el precio del alquiler\ndef obtener_tiendas_por_precio_alquiler(precio_alquiler: int):\n    tiendas_por_precio_alquiler = []\n    for tienda in lista_tiendas:\n        if tienda.precio_alquiler == precio_alquiler:",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def obtener_empleado_por_id(id: int):\n    for empleado in lista_empleados:\n        if empleado.id == id:\n            return empleado\n    return {\"Error\": \"No se ha encontrado ningún empleado por la id \" + str(id)}\n# Método para obtener empleados por nombre\ndef obtener_empleados_por_nombre(nombre: str):\n    empleados_encontrados = [empleado for empleado in lista_empleados if empleado.nombre.lower() == nombre.lower()]\n    return empleados_encontrados if empleados_encontrados else {\"Error\": \"No se han encontrado empleados con el nombre \" + nombre}\n# Método para obtener empleados por apellidos",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "obtener_tiendas_por_precio_alquiler",
+        "label": "obtener_empleados_por_nombre",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def obtener_tiendas_por_precio_alquiler(precio_alquiler: int):\n    tiendas_por_precio_alquiler = []\n    for tienda in lista_tiendas:\n        if tienda.precio_alquiler == precio_alquiler:\n            tiendas_por_precio_alquiler.append(tienda)\n    return tiendas_por_precio_alquiler\n# Método para obtener la última id\ndef ultima_id():\n    return (max(lista_tiendas, key = id).id + 1)\n#endregion",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def obtener_empleados_por_nombre(nombre: str):\n    empleados_encontrados = [empleado for empleado in lista_empleados if empleado.nombre.lower() == nombre.lower()]\n    return empleados_encontrados if empleados_encontrados else {\"Error\": \"No se han encontrado empleados con el nombre \" + nombre}\n# Método para obtener empleados por apellidos\ndef obtener_empleados_por_apellidos(apellidos: str):\n    empleados_encontrados = [empleado for empleado in lista_empleados if empleado.apellidos.lower() == apellidos.lower()]\n    return empleados_encontrados if empleados_encontrados else {\"Error\": \"No se han encontrado empleados con los apellidos \" + apellidos}\n# Método para obtener empleado por teléfono\ndef obtener_empleado_por_telefono(telefono: int):\n    for empleado in lista_empleados:",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_empleados_por_apellidos",
+        "kind": 2,
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def obtener_empleados_por_apellidos(apellidos: str):\n    empleados_encontrados = [empleado for empleado in lista_empleados if empleado.apellidos.lower() == apellidos.lower()]\n    return empleados_encontrados if empleados_encontrados else {\"Error\": \"No se han encontrado empleados con los apellidos \" + apellidos}\n# Método para obtener empleado por teléfono\ndef obtener_empleado_por_telefono(telefono: int):\n    for empleado in lista_empleados:\n        if empleado.telefono == telefono:\n            return empleado\n    return {\"Error\": \"No se ha encontrado ningún empleado por el teléfono \" + str(telefono)}\n# Método para obtener empleado por correo",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_empleado_por_telefono",
+        "kind": 2,
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def obtener_empleado_por_telefono(telefono: int):\n    for empleado in lista_empleados:\n        if empleado.telefono == telefono:\n            return empleado\n    return {\"Error\": \"No se ha encontrado ningún empleado por el teléfono \" + str(telefono)}\n# Método para obtener empleado por correo\ndef obtener_empleado_por_correo(correo: str):\n    for empleado in lista_empleados:\n        if empleado.correo.lower() == correo.lower():\n            return empleado",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_empleado_por_correo",
+        "kind": 2,
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def obtener_empleado_por_correo(correo: str):\n    for empleado in lista_empleados:\n        if empleado.correo.lower() == correo.lower():\n            return empleado\n    return {\"Error\": \"No se ha encontrado ningún empleado con el correo \" + correo}\n# Método para obtener empleados por id_tienda\ndef obtener_empleados_por_id_tienda(id_tienda: int):\n    empleados_por_tienda = [empleado for empleado in lista_empleados if empleado.id_tienda == id_tienda]\n    return empleados_por_tienda if empleados_por_tienda else {\"Error\": \"No se han encontrado empleados para la tienda con id \" + str(id_tienda)}\n# Método para obtener la última id",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_empleados_por_id_tienda",
+        "kind": 2,
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def obtener_empleados_por_id_tienda(id_tienda: int):\n    empleados_por_tienda = [empleado for empleado in lista_empleados if empleado.id_tienda == id_tienda]\n    return empleados_por_tienda if empleados_por_tienda else {\"Error\": \"No se han encontrado empleados para la tienda con id \" + str(id_tienda)}\n# Método para obtener la última id\ndef ultima_id():\n    return (max(lista_empleados, key = id).id + 1)\n#endregion",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
         "label": "ultima_id",
         "kind": 2,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "def ultima_id():\n    return (max(lista_tiendas, key = id).id + 1)\n#endregion",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "def ultima_id():\n    return (max(lista_empleados, key = id).id + 1)\n#endregion",
+        "detail": "routers.empleado",
         "documentation": {}
     },
     {
-        "label": "app",
+        "label": "router",
         "kind": 5,
-        "importPath": "tienda",
-        "description": "tienda",
-        "peekOfCode": "app = FastAPI()\n# Entidad tienda\nclass Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",",
-        "detail": "tienda",
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "router = APIRouter()\n# Entidad empleado\nclass Empleado(BaseModel):\n    id: int\n    nombre: str\n    apellidos: str\n    telefono: int\n    correo: str\n    num_cuenta: str\n    id_tienda: int",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "nombres",
+        "kind": 5,
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "nombres = [\n    \"Carlos\", \"María\", \"José\", \"Ana\", \"Luis\", \"Laura\", \"Miguel\", \"Lucía\", \"Javier\", \"Sofía\",\n    \"Andrés\", \"Elena\", \"Pedro\", \"Marta\", \"Diego\", \"Clara\", \"Raúl\", \"Irene\", \"David\", \"Patricia\"\n]\napellidos = [\n    \"García\", \"López\", \"Martínez\", \"Hernández\", \"Pérez\", \"Gómez\", \"Sánchez\", \"Romero\", \"Díaz\", \"Torres\",\n    \"Ruiz\", \"Flores\", \"Vargas\", \"Moreno\", \"Castro\", \"Suárez\", \"Navarro\", \"Ortega\", \"Delgado\", \"Ramos\"\n]\n# Lista de empleados\nlista_empleados = [",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "apellidos",
+        "kind": 5,
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "apellidos = [\n    \"García\", \"López\", \"Martínez\", \"Hernández\", \"Pérez\", \"Gómez\", \"Sánchez\", \"Romero\", \"Díaz\", \"Torres\",\n    \"Ruiz\", \"Flores\", \"Vargas\", \"Moreno\", \"Castro\", \"Suárez\", \"Navarro\", \"Ortega\", \"Delgado\", \"Ramos\"\n]\n# Lista de empleados\nlista_empleados = [\n    Empleado(\n        id=i+1,\n        nombre=nombres[i],\n        apellidos=apellidos[i],",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "lista_empleados",
+        "kind": 5,
+        "importPath": "routers.empleado",
+        "description": "routers.empleado",
+        "peekOfCode": "lista_empleados = [\n    Empleado(\n        id=i+1,\n        nombre=nombres[i],\n        apellidos=apellidos[i],\n        telefono=random.randint(600000000, 699999999),\n        correo=f\"{nombres[i].lower()}.{apellidos[i].lower()}@correo.com\",\n        num_cuenta=f\"ES{random.randint(1000, 9999)}{random.randint(1000, 9999)}{random.randint(1000, 9999)}{random.randint(1000, 9999)}\",\n        id_tienda=random.randint(1, 20)\n    )",
+        "detail": "routers.empleado",
+        "documentation": {}
+    },
+    {
+        "label": "Tienda",
+        "kind": 6,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "class Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",\n    \"Calle Hidalgo 12\", \"Av. Universidad 234\", \"Calle Morelos 56\",\n    \"Av. Central 789\", \"Calle Independencia 90\", \"Boulevard Benito Juárez 321\",",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "tiendas",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def tiendas():\n    return lista_tiendas\n# Obtener tienda por id\n@router.get(\"/tiendas/id/{id}\")\ndef tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@router.get(\"/tiendas/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "tienda_id",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@router.get(\"/tiendas/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@router.get(\"/tiendas/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "tienda_domicilio",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@router.get(\"/tiendas/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@router.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "tienda_telefono",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@router.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@router.post(\"/tiendas\", status_code = 201, response_model = Tienda)",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "tienda_precio_alquiler",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@router.post(\"/tiendas\", status_code = 201, response_model = Tienda)\ndef add_tienda(tienda: Tienda):\n    # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada\n    tienda.id = ultima_id()\n    # Añadimos la tienda con su nueva id a la lista de tiendas",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "add_tienda",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def add_tienda(tienda: Tienda):\n    # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada\n    tienda.id = ultima_id()\n    # Añadimos la tienda con su nueva id a la lista de tiendas\n    lista_tiendas.append(tienda)\n    # Devolvemos la tienda\n    return tienda\n#endregion\n#region Métodos put\n# Método para modificar una tienda",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "modificar_tienda",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def modificar_tienda(id: int, tienda: Tienda):\n    for index, saved_tienda in enumerate(lista_tiendas):\n        if saved_tienda.id == id:\n            tienda.id = id\n            lista_tiendas[index] = tienda\n            return tienda\n    raise HTTPException(status_code = 404, detail = \"Tienda no encontrada\")\n#endregion\n#region Métodos delete\n# Método para eliminar una tienda",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "eliminar_tienda",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def eliminar_tienda(id: int):\n    for saved_tienda in lista_tiendas:\n        if saved_tienda.id == id:\n            lista_tiendas.remove(saved_tienda)\n            return {}\n    raise HTTPException(status_code = 404, detail = \"Tienda no encontrada.\")\n#endregion\n#region Métodos internos\n# Método para la búsqueda de tiendas por id\ndef obtener_tienda_por_id(id: int):",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_tienda_por_id",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def obtener_tienda_por_id(id: int):\n    for tienda in lista_tiendas:\n        if tienda.id == id:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por la id \" + id}\n# Método para obtener tiendas por domicilio\ndef obtener_tienda_por_domicilio(domicilio: str):\n    for tienda in lista_tiendas:\n        if tienda.domicilio == domicilio:\n            return tienda",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_tienda_por_domicilio",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def obtener_tienda_por_domicilio(domicilio: str):\n    for tienda in lista_tiendas:\n        if tienda.domicilio == domicilio:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por el domicilio \" + domicilio}\n# Método para obtener tiendas por teléfono\ndef obtener_tienda_por_telefono(telefono: int):\n    for tienda in lista_tiendas:\n        if tienda.telefono == telefono:\n            return tienda",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_tienda_por_telefono",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def obtener_tienda_por_telefono(telefono: int):\n    for tienda in lista_tiendas:\n        if tienda.telefono == telefono:\n            return tienda\n    return {\"Error\": \"No se ha encontrado ninguna tienda por el teléfono \" + telefono}\n# Método para obtener tiendas por el precio del alquiler\ndef obtener_tiendas_por_precio_alquiler(precio_alquiler: int):\n    tiendas_por_precio_alquiler = []\n    for tienda in lista_tiendas:\n        if tienda.precio_alquiler == precio_alquiler:",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_tiendas_por_precio_alquiler",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def obtener_tiendas_por_precio_alquiler(precio_alquiler: int):\n    tiendas_por_precio_alquiler = []\n    for tienda in lista_tiendas:\n        if tienda.precio_alquiler == precio_alquiler:\n            tiendas_por_precio_alquiler.append(tienda)\n    return tiendas_por_precio_alquiler\n# Método para obtener la última id\ndef ultima_id():\n    return (max(lista_tiendas, key = id).id + 1)\n#endregion",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "ultima_id",
+        "kind": 2,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "def ultima_id():\n    return (max(lista_tiendas, key = id).id + 1)\n#endregion",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
+        "peekOfCode": "router = APIRouter()\n# Entidad tienda\nclass Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",",
+        "detail": "routers.tienda",
         "documentation": {}
     },
     {
         "label": "domicilios",
         "kind": 5,
-        "importPath": "tienda",
-        "description": "tienda",
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
         "peekOfCode": "domicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",\n    \"Calle Hidalgo 12\", \"Av. Universidad 234\", \"Calle Morelos 56\",\n    \"Av. Central 789\", \"Calle Independencia 90\", \"Boulevard Benito Juárez 321\",\n    \"Calle Zaragoza 67\", \"Av. Madero 101\", \"Calle 5 de Mayo 202\",\n    \"Boulevard López Mateos 303\", \"Calle Allende 404\", \"Av. Las Palmas 505\",\n    \"Calle Matamoros 606\", \"Boulevard Miguel Alemán 707\", \"Calle Victoria 808\",\n    \"Av. Constitución 909\", \"Calle Lerdo 100\"\n]\n# Lista de tiendas",
-        "detail": "tienda",
+        "detail": "routers.tienda",
         "documentation": {}
     },
     {
         "label": "lista_tiendas",
         "kind": 5,
-        "importPath": "tienda",
-        "description": "tienda",
+        "importPath": "routers.tienda",
+        "description": "routers.tienda",
         "peekOfCode": "lista_tiendas = [\n    Tienda(\n        id=i+1,\n        domicilio=domicilios[i],\n        telefono=random.randint(5500000000, 5599999999),\n        precio_alquiler=random.randint(5000, 25000)\n    )\n    for i in range(20)\n]\n#region Métodos get",
-        "detail": "tienda",
+        "detail": "routers.tienda",
+        "documentation": {}
+    },
+    {
+        "label": "inicio",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def inicio():\n    return {\"hello\": \"world\"}",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n# Routers\napp.include_router(empleado.router)\napp.include_router(tienda.router)\n@app.get(\"/\")\ndef inicio():\n    return {\"hello\": \"world\"}",
+        "detail": "main",
         "documentation": {}
     }
 ]
