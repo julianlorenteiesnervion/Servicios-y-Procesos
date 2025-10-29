@@ -81,6 +81,14 @@
         "documentation": {}
     },
     {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
         "label": "Empleado",
         "kind": 6,
         "importPath": "routers.empleado",
@@ -94,7 +102,7 @@
         "kind": 2,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "def empleados():\n    return lista_empleados\n# Obtener empleado por id\n@router.get(\"/empleados/id/{id}\")\ndef empleado_id(id: int):\n    return obtener_empleado_por_id(id)\n# Obtener empleado por nombre\n@router.get(\"/empleados/nombre/{nombre}\")\ndef empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)",
+        "peekOfCode": "def empleados():\n    return lista_empleados\n# Obtener empleado por id\n@router.get(\"/id/{id}\")\ndef empleado_id(id: int):\n    return obtener_empleado_por_id(id)\n# Obtener empleado por nombre\n@router.get(\"/nombre/{nombre}\")\ndef empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -103,7 +111,7 @@
         "kind": 2,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "def empleado_id(id: int):\n    return obtener_empleado_por_id(id)\n# Obtener empleado por nombre\n@router.get(\"/empleados/nombre/{nombre}\")\ndef empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)\n# Obtener empleado por apellidos\n@router.get(\"/empleados/apellidos/{apellidos}\")\ndef empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)",
+        "peekOfCode": "def empleado_id(id: int):\n    return obtener_empleado_por_id(id)\n# Obtener empleado por nombre\n@router.get(\"/nombre/{nombre}\")\ndef empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)\n# Obtener empleado por apellidos\n@router.get(\"/apellidos/{apellidos}\")\ndef empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -112,7 +120,7 @@
         "kind": 2,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "def empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)\n# Obtener empleado por apellidos\n@router.get(\"/empleados/apellidos/{apellidos}\")\ndef empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)\n# Obtener empleado por teléfono\n@router.get(\"/empleados/telefono/{telefono}\")\ndef empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)",
+        "peekOfCode": "def empleado_nombre(nombre: str):\n    return obtener_empleados_por_nombre(nombre)\n# Obtener empleado por apellidos\n@router.get(\"/apellidos/{apellidos}\")\ndef empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)\n# Obtener empleado por teléfono\n@router.get(\"/telefono/{telefono}\")\ndef empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -121,7 +129,7 @@
         "kind": 2,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "def empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)\n# Obtener empleado por teléfono\n@router.get(\"/empleados/telefono/{telefono}\")\ndef empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)\n# Obtener empleado por correo\n@router.get(\"/empleados/correo/{correo}\")\ndef empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)",
+        "peekOfCode": "def empleado_apellidos(apellidos: str):\n    return obtener_empleados_por_apellidos(apellidos)\n# Obtener empleado por teléfono\n@router.get(\"/telefono/{telefono}\")\ndef empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)\n# Obtener empleado por correo\n@router.get(\"/correo/{correo}\")\ndef empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -130,7 +138,7 @@
         "kind": 2,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "def empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)\n# Obtener empleado por correo\n@router.get(\"/empleados/correo/{correo}\")\ndef empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)\n# Obtener empleados por IdTienda\n@router.get(\"/empleados/id_tienda/{id_tienda}\")\ndef empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)",
+        "peekOfCode": "def empleado_telefono(telefono: int):\n    return obtener_empleado_por_telefono(telefono)\n# Obtener empleado por correo\n@router.get(\"/correo/{correo}\")\ndef empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)\n# Obtener empleados por IdTienda\n@router.get(\"/id_tienda/{id_tienda}\")\ndef empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -139,7 +147,7 @@
         "kind": 2,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "def empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)\n# Obtener empleados por IdTienda\n@router.get(\"/empleados/id_tienda/{id_tienda}\")\ndef empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)\n#endregion\n#region Métodos post\n# Añadir un empleado\n@router.post(\"/empleados\", status_code = 201, response_model = Empleado)",
+        "peekOfCode": "def empleado_correo(correo: str):\n    return obtener_empleado_por_correo(correo)\n# Obtener empleados por IdTienda\n@router.get(\"/id_tienda/{id_tienda}\")\ndef empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)\n#endregion\n#region Métodos post\n# Añadir un empleado\n@router.post(\"/\", status_code = 201, response_model = Empleado)",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -148,7 +156,7 @@
         "kind": 2,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "def empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)\n#endregion\n#region Métodos post\n# Añadir un empleado\n@router.post(\"/empleados\", status_code = 201, response_model = Empleado)\ndef add_empleado(empleado: Empleado):\n    # Calculamos la siguiente id y machacamos la que llegó en el empleado por parámetro de entrada\n    empleado.id = ultima_id()\n    # Añadimos el empleado con su nueva id a la lista de empleados",
+        "peekOfCode": "def empleados_por_tienda(id_tienda: int):\n    return obtener_empleados_por_id_tienda(id_tienda)\n#endregion\n#region Métodos post\n# Añadir un empleado\n@router.post(\"/\", status_code = 201, response_model = Empleado)\ndef add_empleado(empleado: Empleado):\n    # Calculamos la siguiente id y machacamos la que llegó en el empleado por parámetro de entrada\n    empleado.id = ultima_id()\n    # Añadimos el empleado con su nueva id a la lista de empleados",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -247,7 +255,7 @@
         "kind": 5,
         "importPath": "routers.empleado",
         "description": "routers.empleado",
-        "peekOfCode": "router = APIRouter()\n# Entidad empleado\nclass Empleado(BaseModel):\n    id: int\n    nombre: str\n    apellidos: str\n    telefono: int\n    correo: str\n    num_cuenta: str\n    id_tienda: int",
+        "peekOfCode": "router = APIRouter(prefix=\"/empleados\",\n                   tags=\"empleados\")\n# Entidad empleado\nclass Empleado(BaseModel):\n    id: int\n    nombre: str\n    apellidos: str\n    telefono: int\n    correo: str\n    num_cuenta: str",
         "detail": "routers.empleado",
         "documentation": {}
     },
@@ -292,7 +300,7 @@
         "kind": 2,
         "importPath": "routers.tienda",
         "description": "routers.tienda",
-        "peekOfCode": "def tiendas():\n    return lista_tiendas\n# Obtener tienda por id\n@router.get(\"/tiendas/id/{id}\")\ndef tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@router.get(\"/tiendas/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)",
+        "peekOfCode": "def tiendas():\n    return lista_tiendas\n# Obtener tienda por id\n@router.get(\"/id/{id}\")\ndef tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@router.get(\"/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)",
         "detail": "routers.tienda",
         "documentation": {}
     },
@@ -301,7 +309,7 @@
         "kind": 2,
         "importPath": "routers.tienda",
         "description": "routers.tienda",
-        "peekOfCode": "def tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@router.get(\"/tiendas/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@router.get(\"/tiendas/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)",
+        "peekOfCode": "def tienda_id(id: int):\n    return obtener_tienda_por_id(id)\n# Obtener tienda por domicilio\n@router.get(\"/domicilio/{domicilio}\")\ndef tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@router.get(\"/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)",
         "detail": "routers.tienda",
         "documentation": {}
     },
@@ -310,7 +318,7 @@
         "kind": 2,
         "importPath": "routers.tienda",
         "description": "routers.tienda",
-        "peekOfCode": "def tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@router.get(\"/tiendas/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@router.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)",
+        "peekOfCode": "def tienda_domicilio(domicilio: str):\n    return obtener_tienda_por_domicilio(domicilio)\n# Obtener tienda por telefono\n@router.get(\"/telefono/{telefono}\")\ndef tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@router.get(\"/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)",
         "detail": "routers.tienda",
         "documentation": {}
     },
@@ -319,7 +327,7 @@
         "kind": 2,
         "importPath": "routers.tienda",
         "description": "routers.tienda",
-        "peekOfCode": "def tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@router.get(\"/tiendas/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@router.post(\"/tiendas\", status_code = 201, response_model = Tienda)",
+        "peekOfCode": "def tienda_telefono(telefono: int):\n    return obtener_tienda_por_telefono(telefono)\n# Obtener tiendas por precio de alquiler\n@router.get(\"/precio_alquiler/{precio_alquiler}\")\ndef tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@router.post(\"/\", status_code = 201, response_model = Tienda)",
         "detail": "routers.tienda",
         "documentation": {}
     },
@@ -328,7 +336,7 @@
         "kind": 2,
         "importPath": "routers.tienda",
         "description": "routers.tienda",
-        "peekOfCode": "def tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@router.post(\"/tiendas\", status_code = 201, response_model = Tienda)\ndef add_tienda(tienda: Tienda):\n    # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada\n    tienda.id = ultima_id()\n    # Añadimos la tienda con su nueva id a la lista de tiendas",
+        "peekOfCode": "def tienda_precio_alquiler(precio_alquiler: int):\n    return obtener_tiendas_por_precio_alquiler(precio_alquiler)\n#endregion\n#region Métodos post\n# Añadir una tienda\n@router.post(\"/\", status_code = 201, response_model = Tienda)\ndef add_tienda(tienda: Tienda):\n    # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada\n    tienda.id = ultima_id()\n    # Añadimos la tienda con su nueva id a la lista de tiendas",
         "detail": "routers.tienda",
         "documentation": {}
     },
@@ -409,7 +417,7 @@
         "kind": 5,
         "importPath": "routers.tienda",
         "description": "routers.tienda",
-        "peekOfCode": "router = APIRouter()\n# Entidad tienda\nclass Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [\n    \"Av. Reforma 123\", \"Calle Juárez 45\", \"Boulevard Insurgentes 678\",",
+        "peekOfCode": "router = APIRouter(prefix=\"/tiendas\",\n                   tags=\"tiendas\")\n# Entidad tienda\nclass Tienda(BaseModel):\n    id:int\n    domicilio:str\n    telefono:int\n    precio_alquiler:int\n# Direcciones de domicilios\ndomicilios = [",
         "detail": "routers.tienda",
         "documentation": {}
     },
@@ -445,7 +453,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\n# Routers\napp.include_router(empleado.router)\napp.include_router(tienda.router)\n@app.get(\"/\")\ndef inicio():\n    return {\"hello\": \"world\"}",
+        "peekOfCode": "app = FastAPI()\n# Routers\napp.include_router(empleado.router)\napp.include_router(tienda.router)\napp.mount(\"/static\", StaticFiles(directory=\"static\"), name=\"static\")\n@app.get(\"/\")\ndef inicio():\n    return {\"hello\": \"world\"}",
         "detail": "main",
         "documentation": {}
     }

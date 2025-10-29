@@ -2,7 +2,8 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import random
 
-router = APIRouter()
+router = APIRouter(prefix="/tiendas",
+                   tags=["tiendas"])
 
 # Entidad tienda
 class Tienda(BaseModel):
@@ -35,27 +36,27 @@ lista_tiendas = [
 
 #region Métodos get
 # Obtener todas las tiendas
-@router.get("/tiendas")
+@router.get("/")
 def tiendas():
     return lista_tiendas
 
 # Obtener tienda por id
-@router.get("/tiendas/id/{id}")
+@router.get("/id/{id}")
 def tienda_id(id: int):
     return obtener_tienda_por_id(id)
 
 # Obtener tienda por domicilio
-@router.get("/tiendas/domicilio/{domicilio}")
+@router.get("/domicilio/{domicilio}")
 def tienda_domicilio(domicilio: str):
     return obtener_tienda_por_domicilio(domicilio)
 
 # Obtener tienda por telefono
-@router.get("/tiendas/telefono/{telefono}")
+@router.get("/telefono/{telefono}")
 def tienda_telefono(telefono: int):
     return obtener_tienda_por_telefono(telefono)
 
 # Obtener tiendas por precio de alquiler
-@router.get("/tiendas/precio_alquiler/{precio_alquiler}")
+@router.get("/precio_alquiler/{precio_alquiler}")
 def tienda_precio_alquiler(precio_alquiler: int):
     return obtener_tiendas_por_precio_alquiler(precio_alquiler)
 
@@ -63,7 +64,7 @@ def tienda_precio_alquiler(precio_alquiler: int):
 
 #region Métodos post
 # Añadir una tienda
-@router.post("/tiendas", status_code = 201, response_model = Tienda)
+@router.post("/", status_code = 201, response_model = Tienda)
 def add_tienda(tienda: Tienda):
 
     # Calculamos la siguiente id y machacamos la que llegó en la tienda por parámetro de entrada
@@ -79,7 +80,7 @@ def add_tienda(tienda: Tienda):
 
 #region Métodos put
 # Método para modificar una tienda
-@router.put("/tiendas/id/{id}")
+@router.put("/id/{id}")
 def modificar_tienda(id: int, tienda: Tienda):
     for index, saved_tienda in enumerate(lista_tiendas):
         if saved_tienda.id == id:
@@ -93,7 +94,7 @@ def modificar_tienda(id: int, tienda: Tienda):
 
 #region Métodos delete
 # Método para eliminar una tienda
-@router.delete("/tiendas/id/{id}")
+@router.delete("/id/{id}")
 def eliminar_tienda(id: int):
     for saved_tienda in lista_tiendas:
         if saved_tienda.id == id:
