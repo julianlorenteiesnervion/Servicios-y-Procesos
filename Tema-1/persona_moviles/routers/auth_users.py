@@ -23,9 +23,6 @@ password_hash = PasswordHash.recommended()
 
 router = APIRouter()
 
-# ---------------------------
-# MODELOS
-# ---------------------------
 class User(BaseModel):
     username: str
     fullname: str
@@ -35,9 +32,6 @@ class User(BaseModel):
 class UserDB(User):
     password: str
 
-# ---------------------------
-# BASE DE DATOS FALSA
-# ---------------------------
 # Solo guardamos diccionarios, no objetos
 users_db = {
     "elenarg": {
@@ -55,10 +49,6 @@ users_db = {
         "password": password_hash.hash("238904")
     }
 }
-
-# ---------------------------
-# ENDPOINTS
-# ---------------------------
 
 @router.post("/register", status_code=201)
 def register(user: UserDB):
