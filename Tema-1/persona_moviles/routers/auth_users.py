@@ -87,3 +87,21 @@ async def login(form: OAuth2PasswordRequestForm = Depends()):
 
     except Exception:
         raise HTTPException(status_code=401, detail="Error al verificar la contraseña")
+
+async def authentication(token: str = Depends(oauth2)):
+    try:
+        username = jwt.decode(token, SECRET_KEY, algorithm = ALGORITHM).get("sub")
+
+        if username is None:
+            raise HTTPException(status_code=401, detail="Credenciales de autenticación inválidas",
+                                headers={"WWW-Authenticate": "Bearer"})
+    except:
+        raise HTTPException(status_code=401, detail="Credenciales de autenticación inválidas",
+                            headers={"WWW-Authenticate": "Bearer"})
+    
+    user = User(**users_db[username])
+
+    if user.disabled:
+        raise HTTPException(status_code=400, detail="Usuario inactivo")
+    
+    return user
