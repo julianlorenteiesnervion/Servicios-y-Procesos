@@ -39,14 +39,14 @@ users_db = {
         "fullname": "Elena Rivero",
         "email": "elena@prueba.es",
         "disabled": False,
-        "password": password_hash.hash("123456")
+        "password": "$argon2id$v=19$m=65536,t=3,p=4$9HmKRoAE+LbDgkFaEH3LxQ$ubIgtO+qqfGRORmMe+6oHBYIMWV2YM0ZgkxqSvoIF/g"
     },
     "julianlorenteiesnervion": {
         "username": "julianlorenteiesnervion",
         "fullname": "Julián Lorente",
         "email": "julian.lorente@iesnervion.es",
         "disabled": False,
-        "password": password_hash.hash("238904")
+        "password": "$argon2id$v=19$m=65536,t=3,p=4$vRnE7uIKB1OFmxQmCV1oFw$W14PhIixYBcZLuynfiwxWMkE+b0Br+UuvSFFqMn7gCI"
     }
 }
 
