@@ -1,0 +1,5 @@
+Este es un texto de ejemplo para contar vocales.
+Contiene varias vocales como a, e, i, o, u.
+También tiene mayúsculas: A, E, I, O, U.
+El módulo multiprocessing es muy útil para procesos paralelos.
+Python es un lenguaje de programación muy versátil.

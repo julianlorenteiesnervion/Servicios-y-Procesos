@@ -1,0 +1,30 @@
+Donnie Darko;2001
+Moulin Rouge;2001
+El viaje de Chihiro;2001
+Inteligencia Artificial;2001
+Amelie;2001
+Ocean's Eleven;2001
+Requiem por un sueño;2001
+El Señor de los Anillos: La Comunidad del Anillo;2001
+Shrek;2001
+Harry Potter y la Piedra Filosofal;2001
+Spider-Man;2002
+El Pianista;2002
+Minority Report;2002
+Gangs of New York;2002
+Piratas del Caribe;2003
+Kill Bill Vol. 1;2003
+Encontrando a Nemo;2003
+Matrix Reloaded;2003
+El Señor de los Anillos: El Retorno del Rey;2003
+Lost in Translation;2003
+Kill Bill Vol. 2;2004
+El Origen;2010
+Interstellar;2014
+The Dark Knight;2008
+Avatar;2009
+Inception;2010
+Gladiator;2000
+Memento;2000
+Náufrago;2000
+Billy Elliot;2000
