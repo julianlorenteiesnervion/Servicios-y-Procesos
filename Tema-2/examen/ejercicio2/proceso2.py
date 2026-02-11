@@ -7,17 +7,13 @@ Parámetros de entrada:
 - salario_minimo (int): salario mínimo para filtrar.
 - conn_recepcion: extremo de lectura del Pipe desde el Proceso 1.
 - conn_envio: extremo de escritura del Pipe hacia el Proceso 3.
-
-Recibe el salario mínimo y las dos conexiones del Pipe (entrada y salida).
-Envía las líneas tal y como le llegan, sin modificarlas.
-Se envía None como centinela para indicar fin de datos al Proceso 3.
 """
 
 
 def filtrar_por_salario(salario_minimo: int, conn_recepcion, conn_envio) -> None:
     while True:
         linea = conn_recepcion.recv()
-        # Si recibimos el centinela, terminamos
+        # Si recibimos None, es que el Proceso 1 ha terminado de enviar datos
         if linea is None:
             break
         # Formato recibido: Nombre;Apellido;Salario
@@ -28,7 +24,7 @@ def filtrar_por_salario(salario_minimo: int, conn_recepcion, conn_envio) -> None
         if salario >= salario_minimo:
             conn_envio.send(linea)
 
-    # Centinela para indicar fin de datos al Proceso 3
+    # Fin de datos
     conn_envio.send(None)
     conn_recepcion.close()
     conn_envio.close()

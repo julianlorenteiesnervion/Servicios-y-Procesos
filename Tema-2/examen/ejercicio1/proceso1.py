@@ -5,10 +5,6 @@ y las escribe en un fichero con nombre DD-MM.txt.
 Parámetros de entrada:
 - dia (int): número del día (1-31).
 - mes (int): número del mes (12 para diciembre).
-
-Se elige recibir día y mes por separado para construir el nombre del fichero
-con el formato DD-MM.txt. El mes se pasa como parámetro para mantener
-flexibilidad, aunque en este ejercicio siempre será 12.
 """
 
 import random
@@ -16,6 +12,7 @@ import os
 
 
 def generar_temperaturas(dia: int, mes: int) -> None:
+    
     # Construimos el nombre del fichero con formato DD-MM.txt
     nombre_fichero = f"{dia:02d}-{mes:02d}.txt"
 

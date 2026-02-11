@@ -6,9 +6,6 @@ Parámetros de entrada:
 - dia (int): número del día.
 - mes (int): número del mes.
 - lock (Lock): lock compartido entre procesos para escritura segura en minimas.txt.
-
-Mismo enfoque que proceso2 pero buscando la temperatura mínima.
-El Lock se recibe desde Main para evitar condiciones de carrera al escribir.
 """
 
 import os

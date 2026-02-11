@@ -1,19 +1,6 @@
 """
-EJERCICIO 2 - Examen Unidad 2
+EJERCICIO 2 - Examen Unidad 2 - Julián Lorente Marroco 2º DAM
 
-Decisiones tomadas:
-- Se usa Pipe como medio de comunicación entre procesos porque es el más apropiado
-  para una cadena lineal de producción (Proceso 1 → Proceso 2 → Proceso 3).
-  Los Pipes son eficientes para comunicación punto a punto entre dos procesos.
-- Se crean dos Pipes: uno conecta P1 con P2, y otro conecta P2 con P3.
-- El Proceso 1 recibe el departamento y el extremo de escritura del pipe1.
-- El Proceso 2 recibe el salario mínimo, el extremo de lectura del pipe1
-  y el extremo de escritura del pipe2.
-- El Proceso 3 recibe solo el extremo de lectura del pipe2.
-- Se usa None como centinela para indicar el fin de datos en cada pipe.
-- Los procesos se lanzan en orden (P3, P2, P1) para que los receptores estén
-  listos antes de que el emisor empiece a enviar datos.
-- El Main espera a que terminen todos los procesos con join().
 """
 
 from multiprocessing import Process, Pipe

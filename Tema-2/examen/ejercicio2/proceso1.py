@@ -6,10 +6,6 @@ Las líneas enviadas contienen toda la información MENOS el departamento.
 Parámetros de entrada:
 - departamento (str): nombre del departamento a filtrar.
 - conn_envio: extremo de escritura del Pipe hacia el Proceso 2.
-
-Solo recibe el departamento y la conexión del Pipe.
-El nombre del fichero (salarios.txt) es fijo y conocido, no es necesario pasarlo.
-Se envía None como centinela para indicar fin de datos.
 """
 
 import os
@@ -32,6 +28,6 @@ def filtrar_por_departamento(departamento: str, conn_envio) -> None:
                 linea_sin_depto = f"{partes[0]};{partes[1]};{partes[2]}"
                 conn_envio.send(linea_sin_depto)
 
-    # Centinela para indicar fin de datos
+    # Fin de datos
     conn_envio.send(None)
     conn_envio.close()

@@ -6,10 +6,6 @@ Parámetros de entrada:
 - dia (int): número del día.
 - mes (int): número del mes.
 - lock (Lock): lock compartido entre procesos para escritura segura en maximas.txt.
-
-Día y mes son necesarios para construir el nombre del fichero a leer.
-El Lock se recibe desde Main porque múltiples procesos escriben en el mismo
-fichero de forma simultánea, y es necesario para evitar condiciones de carrera.
 """
 
 import os

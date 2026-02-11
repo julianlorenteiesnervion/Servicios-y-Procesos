@@ -4,9 +4,6 @@ en el fichero empleados.txt con el formato: Apellido Nombre, Salario
 
 Parámetros de entrada:
 - conn_recepcion: extremo de lectura del Pipe desde el Proceso 2.
-
-Solo necesita la conexión del Pipe para recibir los datos.
-El nombre del fichero de salida (empleados.txt) es fijo y conocido.
 """
 
 import os
@@ -19,7 +16,7 @@ def escribir_empleados(conn_recepcion) -> None:
     with open(ruta_fichero, 'w', encoding='utf-8') as f:
         while True:
             linea = conn_recepcion.recv()
-            # Si recibimos el centinela, terminamos
+            # Si recibimos None, es que el Proceso 2 ha terminado de enviar datos
             if linea is None:
                 break
             # Formato recibido: Nombre;Apellido;Salario
